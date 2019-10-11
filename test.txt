@@ -1,1 +1,4 @@
-testsitnsogsnogfds
+This is a test by Blayde Dietsch
+I am editing this file via VSCode
+The date is 11/10/2019
+The Time is 7:44 PM
