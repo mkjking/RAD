@@ -6,6 +6,7 @@
 </head>
 <body>
     <?php
+    //Code to handle most Searched
     include $_SERVER['DOCUMENT_ROOT'].'/WEB/header/header.php';
 
     echo "<br>";
