@@ -7,7 +7,7 @@
 </head>
 <body>
 <?php
-require $_SERVER['DOCUMENT_ROOT'] . '/WEB/header/header.php';
+    require $_SERVER['DOCUMENT_ROOT'] . '/WEB/header/header.php';
 ?>
 <h2>SEARCH MOVIES</h2>
 <div class="form">
