@@ -9,7 +9,6 @@
         <?php
             include $_SERVER['DOCUMENT_ROOT'].'/WEB/header/header.php';
 
-
             echo "<br>";
             $array = array();
             $initialTitleArray = array();
