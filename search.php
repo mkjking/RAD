@@ -36,7 +36,10 @@
                 <input type="submit" name="searched" value="Most Searched">
             </form>
         </div>
+        
         <?php
+            //Code to Search
+
             //Server variables
             $servername = "localhost";
             $username   = "root";
