@@ -1,4 +1,3 @@
-
 # Rapid App Development Project
 ```
 Project for TAFE RAD Class
