@@ -146,13 +146,6 @@ table {
     margin: 0 auto;
 }
 
-<<<<<<< HEAD
-.content img {
-    width:100%;
-}
-
-=======
->>>>>>> be3ce3f07e10d42012862773d8a61c074f5c2b9e
 /*========================================= FONTS =========================================*/
 
 @font-face {
@@ -163,7 +156,6 @@ table {
 @font-face {
     font-family: Righteous;
     src: url(fonts/Righteous-Regular.ttf)
-<<<<<<< HEAD
 }
 
 /*========================================= SCREENS =========================================*/
@@ -317,9 +309,11 @@ table {
         margin: 0 auto;
     }
 
-/*    .content img {
+    /*
+    .content img {
         width:100%;
-    }*/
+    }
+    */
 
     /*=================== FONTS ==================*/
 
@@ -656,6 +650,4 @@ table {
         font-family: Righteous;
         src: url(fonts/Righteous-Regular.ttf)
     }
-=======
->>>>>>> be3ce3f07e10d42012862773d8a61c074f5c2b9e
 }

@@ -6,7 +6,7 @@ Project for TAFE RAD Class
 ```
 Blayde Dietsch (Lorderite)
 Noah Jackson (d1plons)
-Mitchel King (mkjk)
+Mitcheal King (mkjk)
 ```
 ## Project Details
 ```

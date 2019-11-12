@@ -13,10 +13,6 @@
     <?php 
 
         //Get Movie Data
-<<<<<<< HEAD
-=======
-
->>>>>>> be3ce3f07e10d42012862773d8a61c074f5c2b9e
         $sql = "SELECT ID, title, searchNo  
                 FROM movies_tbl
                 ORDER BY searchNo DESC
@@ -132,15 +128,9 @@
             imageline($image, $gridLeft, $gridBottom, $gridRight, $gridBottom, $axisColour);
 
             //Post to browser
-<<<<<<< HEAD
-            imagepng($image, "images/image.png");
-            imagedestroy($image);
-            echo "<img src='images/image.png'><p></p>";
-=======
             imagepng($image, "image.png", 0);
             imagedestroy($image);
             echo "<img src='image.png'><p></p>";
->>>>>>> be3ce3f07e10d42012862773d8a61c074f5c2b9e
         }
         else {
             echo "<h1>No Movies Found</h1>";
