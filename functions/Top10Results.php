@@ -44,7 +44,7 @@
 
             // Font settings
             $font = 'fonts/Righteous-Regular.ttf';
-            $fontSize = 12;
+            $fontSize = 14;
             
             //Max value on y-axis
             $yMaxValue = 20;
