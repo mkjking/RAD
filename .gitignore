@@ -1,2 +1,4 @@
+# Ignore image.png
 image.png
-.vscode
+#Ignore vscode folder
+vscode/
