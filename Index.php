@@ -12,10 +12,7 @@
     <head>
         <title>Movies!</title>
         <link rel="stylesheet" type="text/css" href="MovieDatabasecss.css"/>
-<<<<<<< HEAD
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-=======
->>>>>>> be3ce3f07e10d42012862773d8a61c074f5c2b9e
     </head>
 
     <body>
