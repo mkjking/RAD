@@ -1,0 +1,655 @@
+/*========================================= CSS FOR DATABASE WEBSITE =========================================*/
+
+/* This file provides all the essential design aspects of the websites.
+ * Do not use "//" comments in this file as they mean something else in CSS
+ * Send Memes :3
+ */
+
+/*========================================= MAJOR CSS =========================================*/
+body {
+    margin: 0;
+}
+
+header {
+    border: 3px solid black;
+    margin: 20px;
+}
+
+footer {
+    border:  3px solid black;
+    margin: 20px;
+}
+
+.headerContainer {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.title {
+    height: auto;
+    float: left;
+    border: 3px solid black;
+    color: black;
+    margin: 5px;
+    padding: 5px;
+}
+
+h1 {
+    font-Size: 2.5em;
+    font-weight: bold;
+    margin: 3px;
+}
+
+p {
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 3px;
+}
+
+/*========================================= CONTROLS/BUTTONS/ANIMATIONS CSS =========================================*/
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #4CAF50;
+    font-family: Gruppo;
+    font-size: 25px;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 8px 4px;
+    cursor: pointer;
+
+    border: 3px solid black;
+}
+
+header ::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    margin:  0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    
+    border: 2px solid rgb(19, 19, 19);
+    display: inline-block;
+    margin-left: 60px;
+    margin-top: 18px;
+    padding: 3px;
+
+    position: relative;
+}
+
+nav a {
+    color: rgb(50, 50, 50);
+    text-decoration: none;
+    text-transform: uppercase;
+    text-shadow: -1px 0 2px white, 0 1px 2px white, 1px 0 2px white, 0 -1px 2px white;
+    font-weight: bolder;
+
+    font-size: 20px;
+
+    position: relative;
+    top: -2.5px;
+}
+
+nav a:hover {
+    color: black;
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 0%;
+    background-color: transparent;
+
+    border: 1px solid transparent;
+    border-radius: 5px;
+
+    position: relative;
+    top: 35px;
+    left: -1px;
+
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+
+    width: 100%;
+
+    background-color: white;
+    border: 1px solid black;
+}
+
+/*========================================= OTHER CSS =========================================*/
+
+table {
+    font-family: Gruppo;
+}
+
+.container {
+    border: 3px solid black;
+    margin: 20px;
+}
+
+.content {
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.content img {
+    width:100%;
+}
+
+/*========================================= FONTS =========================================*/
+
+@font-face {
+    font-family: Gruppo;
+    src: url(fonts/Gruppo-Regular.ttf)
+}
+
+@font-face {
+    font-family: Righteous;
+    src: url(fonts/Righteous-Regular.ttf)
+}
+
+/*========================================= SCREENS =========================================*/
+
+
+@media screen and (max-width: 1500px) {
+
+    /*=================== MAJOR CSS ==================*/
+
+    body {
+        margin: 0;
+    }
+
+    header {
+        border: 3px solid black;
+        margin: 20px;
+    }
+
+    footer {
+        border:  3px solid black;
+        margin: 20px;
+    }
+
+    .headerContainer {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .headerContainer a {
+        font-size: 120%;
+    }
+
+    .title {
+        height: auto;
+        float: left;
+        border: 3px solid black;
+        color: black;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    h1 {
+        font-Size: 120%;
+        font-weight: bold;
+        margin: 2px;
+    }
+
+    p {
+        font-size: 20px;
+        font-weight: bolder;
+        margin: 3px;
+    }
+
+    /*================= CONTROLS/BUTTONS/ANIMATIONS CSS ==================*/
+
+    input[type=button], input[type=submit], input[type=reset] {
+        background-color: #4CAF50;
+        font-family: Gruppo;
+        font-size: 25px;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 8px 4px;
+        cursor: pointer;
+
+        border: 3px solid black;
+    }
+
+    header ::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    nav {
+        float: right;
+    }
+
+    nav ul {
+        margin:  0;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav li {
+        
+        border: 2px solid rgb(19, 19, 19);
+        display: inline-block;
+        margin-left: 60px;
+        margin-top: 18px;
+        padding: 3px;
+
+        position: relative;
+    }
+
+    nav a {
+        color: rgb(50, 50, 50);
+        text-decoration: none;
+        text-transform: uppercase;
+        text-shadow: -1px 0 2px white, 0 1px 2px white, 1px 0 2px white, 0 -1px 2px white;
+        font-weight: bolder;
+
+        font-size: 20px;
+
+        position: relative;
+        top: -2.5px;
+    }
+
+    nav a:hover {
+        color: black;
+    }
+
+    nav a::before {
+        content: '';
+        display: block;
+        height: 5px;
+        width: 0%;
+        background-color: transparent;
+
+        border: 1px solid transparent;
+        border-radius: 5px;
+
+        position: relative;
+        top: 35px;
+        left: -1px;
+
+        transition: all ease-in-out 250ms;
+    }
+
+    nav a:hover::before {
+
+        width: 100%;
+
+        background-color: white;
+        border: 1px solid black;
+    }
+
+    /*=================== OTHER CSS ==================*/
+
+    table {
+        font-family: Gruppo;
+    }
+
+    .container {
+        border: 3px solid black;
+        margin: 20px;
+    }
+
+    .content {
+        width: 70%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+/*    .content img {
+        width:100%;
+    }*/
+
+    /*=================== FONTS ==================*/
+
+    @font-face {
+        font-family: Gruppo;
+        src: url(fonts/Gruppo-Regular.ttf)
+    }
+
+    @font-face {
+        font-family: Righteous;
+        src: url(fonts/Righteous-Regular.ttf)
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    /*=================== MAJOR CSS ==================*/
+    
+    body {
+        margin: 0;
+    }
+
+    header {
+        border: 3px solid black;
+        margin: 15;
+    }
+
+    footer {
+        border:  3px solid black;
+        margin: 15;
+    }
+
+    .headerContainer {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .title {
+        height: auto;
+        float: left;
+        border: 3px solid black;
+        color: black;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    h1 {
+        font-Size: 80%;
+        font-weight: bold;
+        margin: 3px;
+    }
+
+    p {
+        font-size: 15;
+        font-weight: bolder;
+        margin: 1px;
+    }
+    
+    /*================= CONTROLS/BUTTONS/ANIMATIONS CSS ==================*/
+
+    input[type=button], input[type=submit], input[type=reset] {
+        background-color: #4CAF50;
+        font-family: Gruppo;
+        font-size: 25px;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 8px 4px;
+        cursor: pointer;
+
+        border: 3px solid black;
+    }
+
+    header ::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    nav {
+        float: right;
+    }
+
+    nav ul {
+        margin:  0;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav li {
+        
+        border: 2px solid rgb(19, 19, 19);
+        display: inline-block;
+        margin-left: 60px;
+        margin-top: 18px;
+        padding: 3px;
+
+        position: relative;
+    }
+
+    nav a {
+        color: rgb(50, 50, 50);
+        text-decoration: none;
+        text-transform: uppercase;
+        text-shadow: -1px 0 2px white, 0 1px 2px white, 1px 0 2px white, 0 -1px 2px white;
+        font-weight: bolder;
+
+        font-size: 20px;
+
+        position: relative;
+        top: -2.5px;
+    }
+
+    nav a:hover {
+        color: black;
+    }
+
+    nav a::before {
+        content: '';
+        display: block;
+        height: 5px;
+        width: 0%;
+        background-color: transparent;
+
+        border: 1px solid transparent;
+        border-radius: 5px;
+
+        position: relative;
+        top: 35px;
+        left: -1px;
+
+        transition: all ease-in-out 250ms;
+    }
+
+    nav a:hover::before {
+
+        width: 100%;
+
+        background-color: white;
+        border: 1px solid black;
+    }    
+
+    /*=================== OTHER CSS ==================*/
+
+    table {
+        font-family: Gruppo;
+    }
+
+    .container {
+        border: 3px solid black;
+        margin: 15px;
+    }
+
+    .content {
+        width: 50%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    /*image scaler
+    .content img {
+        width:50%;
+    }*/
+
+    /*=================== FONTS ==================*/
+
+    @font-face {
+        font-family: Gruppo;
+        src: url(fonts/Gruppo-Regular.ttf)
+    }
+
+    @font-face {
+        font-family: Righteous;
+        src: url(fonts/Righteous-Regular.ttf)
+    }
+}
+
+@media screen and (max-width: 500px) {
+    
+    /*===================MAJOR CSS==================*/
+    
+    body {
+        margin: 0;
+    }
+
+    header {
+        border: 3px solid black;
+        margin: 10px;
+    }
+
+    footer {
+        border:  3px solid black;
+        margin: 10px;
+    }
+
+    .headerContainer {
+        width: 30%;
+        margin: 0 auto;
+    }
+
+    .title {
+        height: auto;
+        float: left;
+        border: 3px solid black;
+        color: black;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    h1 {
+        font-Size: 50%;
+        font-weight: bold;
+        margin: 3px;
+    }
+
+    p {
+        font-size: 10px;
+        font-weight: bolder;
+        margin: 0px;
+    }
+
+    /*================= CONTROLS/BUTTONS/ANIMATIONS CSS ==================*/
+
+    input[type=button], input[type=submit], input[type=reset] {
+        background-color: #4CAF50;
+        font-family: Gruppo;
+        font-size: 25px;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 8px 4px;
+        cursor: pointer;
+
+        border: 3px solid black;
+    }
+
+    header ::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    nav {
+        float: right;
+    }
+
+    nav ul {
+        margin:  0;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav li {
+        
+        border: 2px solid rgb(19, 19, 19);
+        display: inline-block;
+        margin-left: 60px;
+        margin-top: 18px;
+        padding: 3px;
+
+        position: relative;
+    }
+
+    nav a {
+        color: rgb(50, 50, 50);
+        text-decoration: none;
+        text-transform: uppercase;
+        text-shadow: -1px 0 2px white, 0 1px 2px white, 1px 0 2px white, 0 -1px 2px white;
+        font-weight: bolder;
+
+        font-size: 20px;
+
+        position: relative;
+        top: -2.5px;
+    }
+
+    nav a:hover {
+        color: black;
+    }
+
+    nav a::before {
+        content: '';
+        display: block;
+        height: 5px;
+        width: 0%;
+        background-color: transparent;
+
+        border: 1px solid transparent;
+        border-radius: 5px;
+
+        position: relative;
+        top: 35px;
+        left: -1px;
+
+        transition: all ease-in-out 250ms;
+    }
+
+    nav a:hover::before {
+
+        width: 100%;
+
+        background-color: white;
+        border: 1px solid black;
+    }
+
+    /*=================== OTHER CSS ==================*/
+
+    table {
+        font-family: Gruppo;
+    }
+
+    .container {
+        border: 3px solid black;
+        margin: 10px;
+    }
+
+    .content {
+        width: 30%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    /*image scaler
+    .content img {
+        width:30%;
+    }*/
+
+    /*=================== FONTS ==================*/
+
+    @font-face {
+        font-family: Gruppo;
+        src: url(fonts/Gruppo-Regular.ttf)
+    }
+
+    @font-face {
+        font-family: Righteous;
+        src: url(fonts/Righteous-Regular.ttf)
+    }
+}
