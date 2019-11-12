@@ -1,11 +1,11 @@
-/*========================================= CSS FOR DATABASE WEBSITE ========================================= */
+/*========================================= CSS FOR DATABASE WEBSITE =========================================*/
 
 /* This file provides all the essential design aspects of the websites.
  * Do not use "//" comments in this file as they mean something else in CSS
  * Send Memes :3
  */
 
-/*========================================= MAJOR CSS ========================================= */
+/*========================================= MAJOR CSS =========================================*/
 body {
     margin: 0;
 }
@@ -46,7 +46,7 @@ p {
     margin: 3px;
 }
 
-/*========================================= CONTROLS/BUTTONS/ANIMATIONS CSS ========================================= */
+/*========================================= CONTROLS/BUTTONS/ANIMATIONS CSS =========================================*/
 
 input[type=button], input[type=submit], input[type=reset] {
     background-color: #4CAF50;
@@ -129,7 +129,7 @@ nav a:hover::before {
     border: 1px solid black;
 }
 
-/*========================================= OTHER CSS ========================================= */
+/*========================================= OTHER CSS =========================================*/
 
 table {
  /* To be Added*/
@@ -146,9 +146,14 @@ table {
     margin: 0 auto;
 }
 
-
+/*========================================= FONTS =========================================*/
 
 @font-face {
- font-family: Gruppo;
- src: url(fonts/Gruppo-Regular.ttf)
+    font-family: Gruppo;
+    src: url(fonts/Gruppo-Regular.ttf)
+}
+
+@font-face {
+    font-family: Righteous;
+    src: url(fonts/Righteous-Regular.ttf)
 }
