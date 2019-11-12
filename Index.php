@@ -36,6 +36,11 @@
                     require'functions/Connection.php';
                 ?>
             </div>
+            <div class="content">
+                <?php
+                    require'functions/Top10Results.php';
+                ?>
+            </div>
         </div>
         
         <footer>

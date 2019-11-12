@@ -2,15 +2,15 @@
     <!-- 
         This php file is to handle a RESULT of the top 10 most searched Movies.
         To safely represent the content of this file please contain it in a DIV
+        A connection to the database must be made prior to referencing this!
 
         Author: Blayde Dietsch
         Date: 12/11/2019
     -->
-    
+
     <h1>Top 10 Searched Movies</h1>
 
     <?php 
-        require'Connection.php';
 
         //Get Movie Data
 
@@ -44,7 +44,7 @@
             $barWidth = 25;
 
             // Font settings
-            $font = 'Righteous-Regular.ttf';
+            $font = 'fonts/Righteous-Regular.ttf';
             $fontSize = 12;
             
             //Max value on y-axis
@@ -111,9 +111,9 @@
                 //Draw the label
                 $labelBox = imagettfbbox($fontSize, 0, $font, $row['title']);
                 $labelWidth = $labelBox[4] - $labelBox[0];
-                $labelX = $itemX - $labelWidth / 4;
+                $labelX = ($divX - ($labelWidth / 1.3));
                 $labelY = $gridBottom + $labelMargin + $fontSize + $labelWidth/1.3;
-                imagettftext($image, $fontSize, 53, $labelX, $labelY, $labelColour, $font, $row['title']);
+                imagettftext($image, $fontSize, 50, $labelX, $labelY, $labelColour, $font, $row['title']);
                 $itemX += $barSpacing;
 
                 //Draw the value
