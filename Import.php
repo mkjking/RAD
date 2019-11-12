@@ -17,7 +17,7 @@
         <header>
             <?php
                 //Include navigation Bar
-                require_once'nav.php';
+                require_once'functions/nav.php';
             ?>
         </header>
 
@@ -27,11 +27,11 @@
 
                 <?php 
                     //Report on validity of the database
-                    require_once'Connection.php';
+                    require_once'functions/Connection.php';
                 ?>
 
                 <div class="work">
-                
+
                     <form action="Import.php" method="post">
                         <p><input type="submit" name="btnImport" value="Import Movies" onclick="import()" /></p>
                     </form>
