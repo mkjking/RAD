@@ -17,7 +17,7 @@
     ?>
 
     <!-- Create all the input boxes that may be needed and placeholders -->
-    <form action="Search.php" method="post">
+    <form action="MoviesSearch.php" method="post">
         <p>MovieID: <input type="text" name="movieID" placeholder="248"></p>
         <p>Title: <input type="text" name="title" placeholder="Dead Bang"></p>
         <p>Studio: <input type="text" name="studio" placeholder="Warner Brothers"></p>

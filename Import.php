@@ -9,7 +9,7 @@
     -->
 
     <head>
-        <title>Movie Rentals: Import</title>
+        <title>Movies: Import</title>
         <link rel="stylesheet" type="text/css" href="MovieDatabasecss.css"/>
     </head>
 

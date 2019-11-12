@@ -19,8 +19,7 @@
                 <li><a href="Index.php">Home</a></li>                 
                 <li><a href="Import.php">Import</a></li>
                 <li><a href="MovieList.php">Movie List</a></li>
-                <li><a href="Search.php">Search</a></li>
-                <li><a href="Top10.php">Top 10</a></li>                
+                <li><a href="MoviesSearch.php">Search</a></li>               
             </ul>
         </nav>
     </div>
