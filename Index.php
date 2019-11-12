@@ -11,7 +11,7 @@
 
     <head>
         <title>Movie Rentals</title>
-        <link rel="stylesheet" type="text/css" href="Rentalcss.css"/>
+        <link rel="stylesheet" type="text/css" href="MovieDatabasecss.css"/>
     </head>
 
     <body>
