@@ -132,7 +132,7 @@ nav a:hover::before {
 /*========================================= OTHER CSS =========================================*/
 
 table {
- /* To be Added*/
+    font-family: Gruppo;
 }
 
 .container {
