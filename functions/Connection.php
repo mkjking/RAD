@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 	<!-- 
-        This php file is to handle a connection to the SQL Database.
+        This php file is to handle a CONNECTION to the SQL Database.
         To safely represent the content of this file please contain it in a DIV
 
         Author: Blayde Dietsch

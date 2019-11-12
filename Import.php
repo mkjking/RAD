@@ -42,7 +42,7 @@
         
         <footer>
             <?php
-                require_once'footer.php'; 
+                require_once'functions/footer.php'; 
             ?>      
         </footer>
     </body>
@@ -51,7 +51,9 @@
         function import() {
             <?php
             if (isset($_POST['btnImport'])){
-                //Function for creating database
+                
+                //===== Function for creating database =====//
+                
                 //Create a connection 
                 $conn = mysqli_connect("localhost", "root", "usbw");
                 if (!$conn) {

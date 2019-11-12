@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
     <!-- 
-        This php file is to handle expressing navigation.
+        This php file is to handle expressing NAVigation.
         To safely represent the content of this file please contain it in a HEADER
 
         Author: Blayde Dietsch
