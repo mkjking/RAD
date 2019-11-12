@@ -25,11 +25,10 @@
             <div class="content">
                 <h1>Welcome To The Home Menu</h1>
 
-                <p>This is the home menu. now yes,
-                    this is a beautiful website.
-                    But it is so much more.
-                    Here, you can do many things.
-                    Just click on the tabs and find out!
+                <p>Welcome to the database for the Rental Movie Collection.
+                   This database can provide you with all the relevant information 
+                   regarding the movies held within the database. Below you can see
+                    the top 10 movies searched all time. 
                 </p>
 
                 <?php 
