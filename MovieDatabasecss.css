@@ -1,9 +1,22 @@
+/*========================================= CSS FOR DATABASE WEBSITE ========================================= */
+
+/* This file provides all the essential design aspects of the websites.
+ * Do not use "//" comments in this file as they mean something else in CSS
+ * Send Memes :3
+ */
+
+/*========================================= MAJOR CSS ========================================= */
 body {
     margin: 0;
 }
 
 header {
     border: 3px solid black;
+    margin: 20px;
+}
+
+footer {
+    border:  3px solid black;
     margin: 20px;
 }
 
@@ -33,6 +46,8 @@ p {
     margin: 3px;
 }
 
+/*========================================= CONTROLS/BUTTONS/ANIMATIONS CSS ========================================= */
+
 input[type=button], input[type=submit], input[type=reset] {
     background-color: #4CAF50;
     font-family: Gruppo;
@@ -43,7 +58,7 @@ input[type=button], input[type=submit], input[type=reset] {
     cursor: pointer;
 
     border: 3px solid black;
-  }
+}
 
 header ::after {
     content: '';
@@ -59,21 +74,6 @@ nav ul {
     margin:  0;
     padding: 0;
     list-style: none;
-}
-
-table {
-
-}
-
-.container {
-    border: 3px solid black;
-    margin: 20px;
-}
-
-.content {
-    width: 90%;
-    text-align: center;
-    margin: 0 auto;
 }
 
 nav li {
@@ -109,17 +109,44 @@ nav a::before {
     display: block;
     height: 5px;
     width: 0%;
-    background-color: white;
+    background-color: transparent;
+
+    border: 1px solid transparent;
+    border-radius: 5px;
 
     position: relative;
     top: 35px;
+    left: -1px;
 
     transition: all ease-in-out 250ms;
 }
 
 nav a:hover::before {
+
     width: 100%;
+
+    background-color: white;
+    border: 1px solid black;
 }
+
+/*========================================= OTHER CSS ========================================= */
+
+table {
+ /* To be Added*/
+}
+
+.container {
+    border: 3px solid black;
+    margin: 20px;
+}
+
+.content {
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
 
 @font-face {
  font-family: Gruppo;
