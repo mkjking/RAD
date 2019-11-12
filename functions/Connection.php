@@ -11,11 +11,7 @@
 	<?php
 		
 		//Variables for connection
-		$host = "localhost";			
-		$user="root";
-		$password="usbw";
-		$database="rentalmovies_db";
-		$port = 3306;
+		include 'config.php';
 
 		//Make connection
 		$conn = mysqli_connect($host,$user,$password, $database, $port);

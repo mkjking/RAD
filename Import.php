@@ -54,9 +54,12 @@
                 if (isset($_POST['btnImport'])){
                     
                     //===== Function for creating database =====//
+
+                    //Include variables
+                    include 'config.php';
                     
                     //Create a connection 
-                    $conn = mysqli_connect("localhost", "root", "usbw");
+                    $conn = mysqli_connect($host,$user,$password);
                     if (!$conn) {
                         echo "<p>Failed Initial connection to MySQLDatabase</p>";
                         exit();
@@ -67,7 +70,7 @@
                     if (mysqli_query($conn, $sql) === true) {
 
                         //Make direct connection to database
-                        $conn = mysqli_connect("localhost", "root", "usbw", "rentalmovies_db");
+                        $conn = mysqli_connect($host,$user,$password, $database, $port);
                         if (!$conn) {
                             echo "<p>Failed Secondary connection to MySQLDatabase</p>";
                             exit();
