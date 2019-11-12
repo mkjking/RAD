@@ -26,13 +26,13 @@
             
             //=====Build Graph=====
             //Image size
-            $imageWidth = 1200;
-            $imageHeight = 600;
+            $imageWidth = 1500;
+            $imageHeight = 800;
 
             //Grid within image
             $gridTop = 30;
-            $gridLeft = 30;
-            $gridBottom = 370;
+            $gridLeft = 330;
+            $gridBottom = 470;
             $gridRight = 1170;
             $gridHeight = $gridBottom - $gridTop;
             $gridWidth = $gridRight - $gridLeft;
