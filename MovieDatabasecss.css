@@ -162,6 +162,7 @@ table {
     font-family: Gruppo;
     color: white;
     border: 3px solid black;
+    margin: auto;
     margin-bottom: 30px;
 }
 
@@ -201,6 +202,7 @@ img {
 
 /*========================================= SCREENS =========================================*/
 
+/*================================================================== 1500 ==================================================================*/
 
 @media screen and (max-width: 1500px) {
 
@@ -210,45 +212,29 @@ img {
         margin: 0;
     }
 
-    header {
-        border: 3px solid black;      
-    }
-
     footer {
         border:  3px solid black;
-        margin: 20px;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     .headerContainer {
-        width: 70%;
+        width: 90%;
         margin: 0 auto;
     }
 
-    .headerContainer a {
-        font-size: 120%;
-    }
-
     .title {
-        height: auto;
-        float: left;
-
-        font-family: Gruppo;
-        
-        margin: 5px;
         margin-top: 20px;
-        padding: 5px;
     }
 
     h1 {
-        font-Size: 120%;
-        font-weight: bold;
-        font-family: Gruppo;
+        font-Size: 25px;
         margin: 2px;
     }
 
     p {
         font-size: 20px;
-        font-weight: bolder;
         margin: 3px;
     }
 
@@ -287,7 +273,7 @@ img {
         border: 2px solid rgb(19, 19, 19);
         display: inline-block;
         margin-left: 60px;
-        margin-top: 18px;
+        margin-top: 26px;
         padding: 3px;
 
         position: relative;
@@ -348,7 +334,7 @@ img {
     }
 
     .content {
-        width: 70%;
+        width: 90%;
         text-align: center;
         margin: 0 auto;
     }
@@ -359,6 +345,8 @@ img {
     }
 }
 
+/*================================================================== 1000 ==================================================================*/
+
 @media screen and (max-width: 1000px) {
 
     /*=================== MAJOR CSS ==================*/
@@ -368,38 +356,30 @@ img {
     }
 
     header {
-        border: 3px solid black;
-        margin: 15;
-    }
-
-    footer {
-        border:  3px solid black;
-        margin: 15;
+        height: 130px;
     }
 
     .headerContainer {
-        width: 50%;
+        width: 90%;
         margin: 0 auto;
     }
 
     .title {
-        height: auto;
-        float: left;
-        border: 3px solid black;
-        color: black;
-        margin: 5px;
-        padding: 5px;
+        margin: auto;
+        margin-top: 10px;
+        align-content: center;
+        padding: 3px;
+        width: 140px;
+        float: none;
     }
 
     h1 {
-        font-Size: 80%;
-        font-weight: bold;
+        font-Size: 20px;
         margin: 3px;
     }
 
     p {
-        font-size: 15;
-        font-weight: bolder;
+        font-size: 15px;
         margin: 1px;
     }
     
@@ -424,7 +404,12 @@ img {
     }
 
     nav {
-        float: right;
+        margin: auto;
+        position: absolute;
+        margin-top: 0px;
+        margin-bottom: 5px;
+        float: none;
+        text-align: center;
     }
 
     nav ul {
@@ -435,11 +420,10 @@ img {
 
     nav li {
         
-        border: 2px solid rgb(19, 19, 19);
+        border: 1px solid rgb(19, 19, 19);
         display: inline-block;
-        margin-left: 60px;
         margin-top: 18px;
-        padding: 3px;
+        padding: 2px;
 
         position: relative;
     }
@@ -451,9 +435,9 @@ img {
         text-shadow: -1px 0 2px white, 0 1px 2px white, 1px 0 2px white, 0 -1px 2px white;
         font-weight: bolder;
 
-        font-size: 20px;
+        font-size: 14px;
 
-        position: relative;
+        position: absolute;
         top: -2.5px;
     }
 
@@ -490,24 +474,42 @@ img {
 
     table {
         font-family: Gruppo;
+        font-size: 12px;
+        border: 1px solid  black;
+        padding: 0px;
+
+        width: 100%;
+
+        table-layout: fixed;
+        border-collapse: collapse;
+    }
+
+    tbody{
+        display:block;
+        width: 100%;
+        overflow: auto;
+        height: 450px;
     }
 
     .container {
         border: 3px solid black;
-        margin: 15px;
+        margin: auto;
+        margin-top: 160px;
     }
 
     .content {
-        width: 50%;
+        width: 90%;
         text-align: center;
         margin: 0 auto;
     }
 
-    /*image scaler
-    .content img {
-        width:50%;
-    }*/
+    img {
+        width: 400px;
+    }
+
 }
+
+/*================================================================== 500 ==================================================================*/
 
 @media screen and (max-width: 500px) {
     

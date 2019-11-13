@@ -30,10 +30,10 @@
             $imageHeight = 800;
 
             //Grid within image
-            $gridTop = 30;
-            $gridLeft = 330;
+            $gridTop = 50;
+            $gridLeft = 230;
             $gridBottom = 470;
-            $gridRight = 1170;
+            $gridRight = 1370;
             $gridHeight = $gridBottom - $gridTop;
             $gridWidth = $gridRight - $gridLeft;
 
@@ -63,7 +63,7 @@
             $axisColour = imagecolorallocate($image, 255, 255, 255);
             $labelColour = $axisColour;
             $gridColour = imagecolorallocate($image, 125, 125, 125);
-            $barColour = imagecolorallocate($image, 255, 0, 255);
+            $barColour = imagecolorallocate($image, 0, 255, 0);
 
             //Fill background
             imagefill($image, 0, 0, $backgroundColour);

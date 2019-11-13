@@ -9,7 +9,7 @@
     -->
 
     <div class="footerContainer"> 
-        <p> &nbsp Program provided by: Blayde Dietsch, Noah Jackson and Mitcheal King &nbsp</p>
+        <p> &nbsp Program provided by: Blayde Dietsch, Noah Jackson and Mitchel King &nbsp</p>
     </div>
 
 </html>
