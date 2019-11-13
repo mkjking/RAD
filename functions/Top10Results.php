@@ -43,7 +43,7 @@
             $barWidth = 25;
 
             // Font settings
-            $font = 'fonts/Righteous-Regular.ttf';
+            $font = realpath('fonts/Righteous-Regular.ttf');
             $fontSize = 14;
             
             //Max value on y-axis
