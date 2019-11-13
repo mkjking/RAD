@@ -26,14 +26,14 @@
             
             //=====Build Graph=====
             //Image size
-            $imageWidth = 1200;
-            $imageHeight = 600;
+            $imageWidth = 1500;
+            $imageHeight = 800;
 
             //Grid within image
-            $gridTop = 30;
-            $gridLeft = 30;
-            $gridBottom = 370;
-            $gridRight = 1170;
+            $gridTop = 50;
+            $gridLeft = 230;
+            $gridBottom = 470;
+            $gridRight = 1370;
             $gridHeight = $gridBottom - $gridTop;
             $gridWidth = $gridRight - $gridLeft;
 
@@ -44,7 +44,7 @@
 
             // Font settings
             $font = 'fonts/Righteous-Regular.ttf';
-            $fontSize = 12;
+            $fontSize = 14;
             
             //Max value on y-axis
             $yMaxValue = 20;
@@ -63,7 +63,7 @@
             $axisColour = imagecolorallocate($image, 255, 255, 255);
             $labelColour = $axisColour;
             $gridColour = imagecolorallocate($image, 125, 125, 125);
-            $barColour = imagecolorallocate($image, 255, 0, 255);
+            $barColour = imagecolorallocate($image, 0, 255, 0);
 
             //Fill background
             imagefill($image, 0, 0, $backgroundColour);
@@ -128,9 +128,12 @@
             imageline($image, $gridLeft, $gridBottom, $gridRight, $gridBottom, $axisColour);
 
             //Post to browser
+<<<<<<< HEAD
             imagepng($image, "images/image.png");
             imagedestroy($image);
             echo "<img src='images/image.png'><p></p>";
+=======
+>>>>>>> 7885d84c7dd78856b3acf0f09b4adbda2371f4f4
             imagepng($image, "image.png", 0);
             imagedestroy($image);
             echo "<img src='image.png'><p></p>";

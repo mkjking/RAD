@@ -6,18 +6,31 @@
  */
 
 /*========================================= MAJOR CSS =========================================*/
+
 body {
     margin: 0;
+    background-color: rgb(54, 57, 63);
 }
 
 header {
-    border: 3px solid black;
-    margin: 20px;
+    top: 0;
+    width: 100%;
+    height: 100px;
+
+    background-color: rgb(19, 19, 19);
+
+    margin: 0px;
+    position: fixed;
+
+    z-index: 9999;
 }
 
 footer {
     border:  3px solid black;
-    margin: 20px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 90%;
 }
 
 .headerContainer {
@@ -28,22 +41,32 @@ footer {
 .title {
     height: auto;
     float: left;
-    border: 3px solid black;
-    color: black;
+    border: 3px solid white;
+    color: white;
     margin: 5px;
+    margin-top: 10px;
     padding: 5px;
 }
 
 h1 {
     font-Size: 2.5em;
-    font-weight: bold;
+    font-weight: bold;   
     margin: 3px;
+    padding: 3px;
+
+    text-shadow: -1px 0 2px grey, 0 1px 2px grey, 1px 0 2px grey, 0 -1px 2px grey;
+
+    color: white;
+    text-decoration-line: underline;
 }
 
 p {
     font-size: 20px;
-    font-weight: bolder;
+    
+    font-family: Righteous;
     margin: 3px;
+
+    color: white;
 }
 
 /*========================================= CONTROLS/BUTTONS/ANIMATIONS CSS =========================================*/
@@ -52,12 +75,16 @@ input[type=button], input[type=submit], input[type=reset] {
     background-color: #4CAF50;
     font-family: Gruppo;
     font-size: 25px;
+    font-weight: bolder;
     padding: 16px 32px;
     text-decoration: none;
     margin: 8px 4px;
     cursor: pointer;
 
     border: 3px solid black;
+    box-shadow: -1px 0 2px grey, 0 1px 2px grey, 1px 0 2px grey, 0 -1px 2px grey;
+
+    border-radius: 20px;
 }
 
 header ::after {
@@ -81,7 +108,7 @@ nav li {
     border: 2px solid rgb(19, 19, 19);
     display: inline-block;
     margin-left: 60px;
-    margin-top: 18px;
+    margin-top: 26px;
     padding: 3px;
 
     position: relative;
@@ -133,11 +160,21 @@ nav a:hover::before {
 
 table {
     font-family: Gruppo;
+    color: white;
+    border: 3px solid black;
+    margin: auto;
+    margin-bottom: 30px;
 }
 
 .container {
     border: 3px solid black;
-    margin: 20px;
+    background-color: rgb(47, 49, 54);
+    margin: auto;
+    width: 90%;
+
+    margin-top: 120px;
+     
+    position: relative;
 }
 
 .content {
@@ -146,13 +183,11 @@ table {
     margin: 0 auto;
 }
 
-<<<<<<< HEAD
-.content img {
-    width:100%;
+img {
+    border: 3px solid white;
+    width: 70%;
 }
 
-=======
->>>>>>> be3ce3f07e10d42012862773d8a61c074f5c2b9e
 /*========================================= FONTS =========================================*/
 
 @font-face {
@@ -163,11 +198,11 @@ table {
 @font-face {
     font-family: Righteous;
     src: url(fonts/Righteous-Regular.ttf)
-<<<<<<< HEAD
 }
 
 /*========================================= SCREENS =========================================*/
 
+/*================================================================== 1500 ==================================================================*/
 
 @media screen and (max-width: 1500px) {
 
@@ -177,43 +212,29 @@ table {
         margin: 0;
     }
 
-    header {
-        border: 3px solid black;
-        margin: 20px;
-    }
-
     footer {
         border:  3px solid black;
-        margin: 20px;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     .headerContainer {
-        width: 70%;
+        width: 90%;
         margin: 0 auto;
     }
 
-    .headerContainer a {
-        font-size: 120%;
-    }
-
     .title {
-        height: auto;
-        float: left;
-        border: 3px solid black;
-        color: black;
-        margin: 5px;
-        padding: 5px;
+        margin-top: 20px;
     }
 
     h1 {
-        font-Size: 120%;
-        font-weight: bold;
+        font-Size: 25px;
         margin: 2px;
     }
 
     p {
         font-size: 20px;
-        font-weight: bolder;
         margin: 3px;
     }
 
@@ -252,7 +273,7 @@ table {
         border: 2px solid rgb(19, 19, 19);
         display: inline-block;
         margin-left: 60px;
-        margin-top: 18px;
+        margin-top: 26px;
         padding: 3px;
 
         position: relative;
@@ -307,32 +328,24 @@ table {
     }
 
     .container {
-        border: 3px solid black;
-        margin: 20px;
+        margin: auto;
+        margin-top: 120px;
+        width: 90%;
     }
 
     .content {
-        width: 70%;
+        width: 90%;
         text-align: center;
         margin: 0 auto;
     }
 
-/*    .content img {
-        width:100%;
-    }*/
-
-    /*=================== FONTS ==================*/
-
-    @font-face {
-        font-family: Gruppo;
-        src: url(fonts/Gruppo-Regular.ttf)
-    }
-
-    @font-face {
-        font-family: Righteous;
-        src: url(fonts/Righteous-Regular.ttf)
+    
+    img {
+        width: 700px;
     }
 }
+
+/*================================================================== 1000 ==================================================================*/
 
 @media screen and (max-width: 1000px) {
 
@@ -343,38 +356,30 @@ table {
     }
 
     header {
-        border: 3px solid black;
-        margin: 15;
-    }
-
-    footer {
-        border:  3px solid black;
-        margin: 15;
+        height: 130px;
     }
 
     .headerContainer {
-        width: 50%;
+        width: 90%;
         margin: 0 auto;
     }
 
     .title {
-        height: auto;
-        float: left;
-        border: 3px solid black;
-        color: black;
-        margin: 5px;
-        padding: 5px;
+        margin: auto;
+        margin-top: 10px;
+        align-content: center;
+        padding: 3px;
+        width: 140px;
+        float: none;
     }
 
     h1 {
-        font-Size: 80%;
-        font-weight: bold;
+        font-Size: 20px;
         margin: 3px;
     }
 
     p {
-        font-size: 15;
-        font-weight: bolder;
+        font-size: 15px;
         margin: 1px;
     }
     
@@ -399,7 +404,12 @@ table {
     }
 
     nav {
-        float: right;
+        margin: auto;
+        position: absolute;
+        margin-top: 0px;
+        margin-bottom: 5px;
+        float: none;
+        text-align: center;
     }
 
     nav ul {
@@ -410,11 +420,10 @@ table {
 
     nav li {
         
-        border: 2px solid rgb(19, 19, 19);
+        border: 1px solid rgb(19, 19, 19);
         display: inline-block;
-        margin-left: 60px;
         margin-top: 18px;
-        padding: 3px;
+        padding: 2px;
 
         position: relative;
     }
@@ -426,9 +435,9 @@ table {
         text-shadow: -1px 0 2px white, 0 1px 2px white, 1px 0 2px white, 0 -1px 2px white;
         font-weight: bolder;
 
-        font-size: 20px;
+        font-size: 14px;
 
-        position: relative;
+        position: absolute;
         top: -2.5px;
     }
 
@@ -465,36 +474,42 @@ table {
 
     table {
         font-family: Gruppo;
+        font-size: 12px;
+        border: 1px solid  black;
+        padding: 0px;
+
+        width: 100%;
+
+        table-layout: fixed;
+        border-collapse: collapse;
+    }
+
+    tbody{
+        display:block;
+        width: 100%;
+        overflow: auto;
+        height: 450px;
     }
 
     .container {
         border: 3px solid black;
-        margin: 15px;
+        margin: auto;
+        margin-top: 160px;
     }
 
     .content {
-        width: 50%;
+        width: 90%;
         text-align: center;
         margin: 0 auto;
     }
 
-    /*image scaler
-    .content img {
-        width:50%;
-    }*/
-
-    /*=================== FONTS ==================*/
-
-    @font-face {
-        font-family: Gruppo;
-        src: url(fonts/Gruppo-Regular.ttf)
+    img {
+        width: 400px;
     }
 
-    @font-face {
-        font-family: Righteous;
-        src: url(fonts/Righteous-Regular.ttf)
-    }
 }
+
+/*================================================================== 500 ==================================================================*/
 
 @media screen and (max-width: 500px) {
     
@@ -645,17 +660,4 @@ table {
         width:30%;
     }*/
 
-    /*=================== FONTS ==================*/
-
-    @font-face {
-        font-family: Gruppo;
-        src: url(fonts/Gruppo-Regular.ttf)
-    }
-
-    @font-face {
-        font-family: Righteous;
-        src: url(fonts/Righteous-Regular.ttf)
-    }
-=======
->>>>>>> be3ce3f07e10d42012862773d8a61c074f5c2b9e
 }
