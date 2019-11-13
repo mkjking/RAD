@@ -128,9 +128,9 @@
             imageline($image, $gridLeft, $gridBottom, $gridRight, $gridBottom, $axisColour);
 
             //Post to browser
-            imagepng($image, "images/image.png");
+            imagepng($image, "image.png");
             imagedestroy($image);
-            echo "<img src='images/image.png'><p></p>";
+            echo "<img src='image.png'><p></p>";
         }
         else {
             echo "<h1>No Movies Found</h1>";
