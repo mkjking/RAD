@@ -128,15 +128,9 @@
             imageline($image, $gridLeft, $gridBottom, $gridRight, $gridBottom, $axisColour);
 
             //Post to browser
-<<<<<<< HEAD
             imagepng($image, "images/image.png");
             imagedestroy($image);
             echo "<img src='images/image.png'><p></p>";
-=======
->>>>>>> 7885d84c7dd78856b3acf0f09b4adbda2371f4f4
-            imagepng($image, "image.png", 0);
-            imagedestroy($image);
-            echo "<img src='image.png'><p></p>";
         }
         else {
             echo "<h1>No Movies Found</h1>";
