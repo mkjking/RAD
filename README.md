@@ -1,9 +1,14 @@
-
 # Rapid App Development Project
 ```
 Project for TAFE RAD Class
 ```
-## Information Regarding Project
+## Developers
 ```
-Some profound text goes here
+Blayde Dietsch (Lorderite)
+Noah Jackson (d1plons)
+Mitcheal King (mkjk)
+```
+## Project Details
+```
+The aim of the project is to create a program that can provide a solution to a client's need to navigate a database of information.
 ```

@@ -1,0 +1,676 @@
+/*========================================= CSS FOR DATABASE WEBSITE =========================================*/
+
+/* This file provides all the essential design aspects of the websites.
+ * Do not use "//" comments in this file as they mean something else in CSS
+ * Send Memes :3
+ */
+
+/*========================================= MAJOR CSS =========================================*/
+
+body {
+    margin: 0;
+    background-color: rgb(54, 57, 63);
+}
+
+header {
+    top: 0;
+    width: 100%;
+    height: 100px;
+
+    background-color: rgb(19, 19, 19);
+
+    margin: 0px;
+    position: fixed;
+
+    z-index: 9999;
+}
+
+footer {
+    border:  3px solid black;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 90%;
+}
+
+.headerContainer {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.title {
+    height: auto;
+    float: left;
+    border: 3px solid white;
+    color: white;
+    margin: 5px;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+h1 {
+    font-Size: 2.5em;
+    font-weight: bold;   
+    margin: 3px;
+    padding: 3px;
+
+    text-shadow: -1px 0 2px grey, 0 1px 2px grey, 1px 0 2px grey, 0 -1px 2px grey;
+
+    color: white;
+    text-decoration-line: underline;
+}
+
+p {
+    font-size: 20px;
+    
+    font-family: Righteous;
+    margin: 3px;
+
+    color: white;
+}
+
+/*========================================= CONTROLS/BUTTONS/ANIMATIONS CSS =========================================*/
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #4CAF50;
+    font-family: Gruppo;
+    font-size: 25px;
+    font-weight: bolder;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 8px 4px;
+    cursor: pointer;
+
+    border: 3px solid black;
+    box-shadow: -1px 0 2px grey, 0 1px 2px grey, 1px 0 2px grey, 0 -1px 2px grey;
+
+    border-radius: 20px;
+}
+
+header ::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    margin:  0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    
+    border: 2px solid rgb(19, 19, 19);
+    display: inline-block;
+    margin-left: 60px;
+    margin-top: 26px;
+    padding: 3px;
+
+    position: relative;
+}
+
+nav a {
+    color: rgb(50, 50, 50);
+    text-decoration: none;
+    text-transform: uppercase;
+    text-shadow: -1px 0 2px white, 0 1px 2px white, 1px 0 2px white, 0 -1px 2px white;
+    font-weight: bolder;
+
+    font-size: 20px;
+
+    position: relative;
+    top: -2.5px;
+}
+
+nav a:hover {
+    color: black;
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 0%;
+    background-color: transparent;
+
+    border: 1px solid transparent;
+    border-radius: 5px;
+
+    position: relative;
+    top: 35px;
+    left: -1px;
+
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+
+    width: 100%;
+
+    background-color: white;
+    border: 1px solid black;
+}
+
+/*========================================= OTHER CSS =========================================*/
+
+table {
+    font-family: Gruppo;
+    color: white;
+    border: 3px solid black;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.container {
+    border: 3px solid black;
+    background-color: rgb(47, 49, 54);
+    margin: auto;
+    width: 90%;
+
+    margin-top: 120px;
+     
+    position: relative;
+}
+
+.content {
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+img {
+    border: 3px solid white;
+    width: 70%;
+}
+
+/*========================================= FONTS =========================================*/
+
+@font-face {
+    font-family: Gruppo;
+    src: url(fonts/Gruppo-Regular.ttf)
+}
+
+@font-face {
+    font-family: Righteous;
+    src: url(fonts/Righteous-Regular.ttf)
+}
+
+/*========================================= SCREENS =========================================*/
+
+/*================================================================== 1500 ==================================================================*/
+
+@media screen and (max-width: 1500px) {
+
+    /*=================== MAJOR CSS ==================*/
+
+    body {
+        margin: 0;
+    }
+
+    footer {
+        border:  3px solid black;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .headerContainer {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .title {
+        margin-top: 20px;
+    }
+
+    h1 {
+        font-Size: 25px;
+        margin: 2px;
+    }
+
+    p {
+        font-size: 20px;
+        margin: 3px;
+    }
+
+    /*================= CONTROLS/BUTTONS/ANIMATIONS CSS ==================*/
+
+    input[type=button], input[type=submit], input[type=reset] {
+        background-color: #4CAF50;
+        font-family: Gruppo;
+        font-size: 25px;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 8px 4px;
+        cursor: pointer;
+
+        border: 3px solid black;
+    }
+
+    header ::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    nav {
+        float: right;
+    }
+
+    nav ul {
+        margin:  0;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav li {
+        
+        border: 2px solid rgb(19, 19, 19);
+        display: inline-block;
+        margin-left: 60px;
+        margin-top: 26px;
+        padding: 3px;
+
+        position: relative;
+    }
+
+    nav a {
+        color: rgb(50, 50, 50);
+        text-decoration: none;
+        text-transform: uppercase;
+        text-shadow: -1px 0 2px white, 0 1px 2px white, 1px 0 2px white, 0 -1px 2px white;
+        font-weight: bolder;
+
+        font-size: 20px;
+
+        position: relative;
+        top: -2.5px;
+    }
+
+    nav a:hover {
+        color: black;
+    }
+
+    nav a::before {
+        content: '';
+        display: block;
+        height: 5px;
+        width: 0%;
+        background-color: transparent;
+
+        border: 1px solid transparent;
+        border-radius: 5px;
+
+        position: relative;
+        top: 35px;
+        left: -1px;
+
+        transition: all ease-in-out 250ms;
+    }
+
+    nav a:hover::before {
+
+        width: 100%;
+
+        background-color: white;
+        border: 1px solid black;
+    }
+
+    /*=================== OTHER CSS ==================*/
+
+    table {
+        font-family: Gruppo;
+    }
+
+    .container {
+        margin: auto;
+        margin-top: 120px;
+        width: 90%;
+    }
+
+    .content {
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    
+    img {
+        width: 700px;
+    }
+}
+
+/*================================================================== 1000 ==================================================================*/
+
+@media screen and (max-width: 1000px) {
+
+    /*=================== MAJOR CSS ==================*/
+    
+    body {
+        margin: 0;
+    }
+
+    header {
+        height: 130px;
+    }
+
+    .headerContainer {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .title {
+        margin: auto;
+        margin-top: 10px;
+        align-content: center;
+        padding: 3px;
+        width: 140px;
+        float: none;
+    }
+
+    h1 {
+        font-Size: 20px;
+        margin: 3px;
+    }
+
+    p {
+        font-size: 15px;
+        margin: 1px;
+    }
+    
+    /*================= CONTROLS/BUTTONS/ANIMATIONS CSS ==================*/
+
+    input[type=button], input[type=submit], input[type=reset] {
+        background-color: #4CAF50;
+        font-family: Gruppo;
+        font-size: 25px;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 8px 4px;
+        cursor: pointer;
+
+        border: 3px solid black;
+    }
+
+    header ::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    nav {
+        margin: auto;
+        position: absolute;
+        margin-top: 0px;
+        margin-bottom: 5px;
+        float: none;
+        text-align: center;
+    }
+
+    nav ul {
+        margin:  0;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav li {
+        
+        border: 1px solid rgb(19, 19, 19);
+        display: inline-block;
+        margin-top: 18px;
+        padding: 2px;
+
+        position: relative;
+    }
+
+    nav a {
+        color: rgb(50, 50, 50);
+        text-decoration: none;
+        text-transform: uppercase;
+        text-shadow: -1px 0 2px white, 0 1px 2px white, 1px 0 2px white, 0 -1px 2px white;
+        font-weight: bolder;
+
+        font-size: 14px;
+
+        position: absolute;
+        top: -2.5px;
+    }
+
+    nav a:hover {
+        color: black;
+    }
+
+    nav a::before {
+        content: '';
+        display: block;
+        height: 5px;
+        width: 0%;
+        background-color: transparent;
+
+        border: 1px solid transparent;
+        border-radius: 5px;
+
+        position: relative;
+        top: 35px;
+        left: -1px;
+
+        transition: all ease-in-out 250ms;
+    }
+
+    nav a:hover::before {
+
+        width: 100%;
+
+        background-color: white;
+        border: 1px solid black;
+    }    
+
+    /*=================== OTHER CSS ==================*/
+
+    table {
+        font-family: Gruppo;
+        font-size: 12px;
+        border: 1px solid  black;
+        padding: 0px;
+
+        width: 100%;
+
+        table-layout: fixed;
+        border-collapse: collapse;
+    }
+
+    tbody{
+        display:block;
+        width: 100%;
+        overflow: auto;
+        height: 450px;
+    }
+
+    .container {
+        border: 3px solid black;
+        margin: auto;
+        margin-top: 160px;
+    }
+
+    .content {
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    img {
+        width: 400px;
+    }
+
+}
+
+/*================================================================== 500 ==================================================================*/
+
+@media screen and (max-width: 500px) {
+    
+    /*===================MAJOR CSS==================*/
+    
+    body {
+        margin: 0;
+    }
+
+    header {
+        height: 100px;
+    }
+
+    .headerContainer {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .title {
+        margin: auto;
+        margin-top: 10px;
+        align-content: center;
+        padding: 3px;
+        width: 140px;
+        float: none;
+    }
+
+
+    h1 {
+        font-Size: 15px;
+        margin: 4px;
+    }
+
+    p {
+        font-size: 10px;
+        margin: 0.5px;
+    }
+
+    /*================= CONTROLS/BUTTONS/ANIMATIONS CSS ==================*/
+
+    input[type=button], input[type=submit], input[type=reset] {
+        background-color: #4CAF50;
+        font-family: Gruppo;
+        font-size: 25px;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 8px 4px;
+        cursor: pointer;
+
+        border: 3px solid black;
+    }
+
+    header ::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    nav {
+        margin: auto;
+        position: absolute;
+        margin-top: 0px;
+        margin-bottom: 5px;
+        float: none;
+        text-align: center;
+    }
+
+    nav ul {
+        margin:  0;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav li {
+        
+        border: 2px solid rgb(19, 19, 19);
+        display: inline-block;
+        margin-left: 60px;
+        margin-top: 9px;
+        padding: 1px;
+
+        position: relative;
+    }
+
+    nav a {
+        color: rgb(50, 50, 50);
+        text-decoration: none;
+        text-transform: uppercase;
+        text-shadow: -1px 0 2px white, 0 1px 2px white, 1px 0 2px white, 0 -1px 1px white;
+        font-weight: bolder;
+
+        font-size: 10px;
+
+        position: absolute;
+        top: -2.5px;
+    }
+
+    nav a:hover {
+        color: black;
+    }
+
+    nav a::before {
+        content: '';
+        display: block;
+        height: 5px;
+        width: 0%;
+        background-color: transparent;
+
+        border: 1px solid transparent;
+        border-radius: 5px;
+
+        position: relative;
+        top: 35px;
+        left: -1px;
+
+        transition: all ease-in-out 250ms;
+    }
+
+    nav a:hover::before {
+
+        width: 100%;
+
+        background-color: white;
+        border: 1px solid black;
+    }
+
+    /*=================== OTHER CSS ==================*/
+
+    table {
+        font-family: Gruppo;
+        font-size: 8px;
+        border: 1px solid  black;
+        padding: 0px;
+
+        width: 100%;
+
+        table-layout: fixed;
+        border-collapse: collapse;
+    }
+
+    tbody {
+        display:block;
+        width: 100%;
+        overflow: auto;
+        height: 250px;
+    }
+
+    .container {
+        border: 3px solid black;
+        margin: auto;
+        margin-top: 130px;
+    }
+
+    .content {
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    img {
+        width:250px;
+    }
+
+}
