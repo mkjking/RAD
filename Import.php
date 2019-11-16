@@ -65,7 +65,7 @@
                     $sql = "CREATE DATABASE IF NOT EXISTS $database";
 
                     //Attempt query
-                    if (mysqli_query($conn, $sql) === true) {
+                    if (mysqli_query($conn, $sql)) {
 
                         //select database
                         $conn = mysqli_connect($host,$user,$password, $database);
@@ -86,11 +86,11 @@
                             )";
 
                         //Run Query
-                        if (mysqli_query($conn, $sql) === TRUE) {
+                        if (mysqli_query($conn, $sql)) {
                                             
                             //Purge table in case it exists
                             $sql = "DELETE FROM movies_tbl";
-                            if (mysqli_query($conn, $sql) === TRUE) {
+                            if (mysqli_query($conn, $sql)) {
                                                 
                                 //Load movie data
                                 $sql = "LOAD DATA LOCAL INFILE 'assets/Movies.csv'
@@ -101,11 +101,11 @@
                                     IGNORE 1 ROWS";
 
                                 //Run query
-                                if (mysqli_query($conn, $sql) === true) {
+                                if (mysqli_query($conn, $sql)) {
                                     //Populate search no column
                                     $sql = "UPDATE movies_tbl 
                                         SET searchNo = 0";
-                                    if (mysqli_query($conn, $sql) === true) {
+                                    if (mysqli_query($conn, $sql)) {
                                         echo "<p>Import Success</p>";
                                         header("Refresh:0");
                                     }else {
@@ -120,6 +120,16 @@
                         } else {
                             echo "<p>Failed Table Creation</p>";
                         }
+                        $sql = "CREATE TABLE IF NOT EXISTS email_tbl (
+                                email VARCHAR(40),
+                                name VARCHAR(20),
+                                news TINYINT(1),
+                                blast TINYINT(1));";
+
+                                //Create email_tbl
+                                if(!mysqli_query($conn, $sql)) {
+                                    echo "<p>Failed email Table Creation</p>";
+                                }
                     } else {
                         echo "<p>Failed Database Creation</p>";
                     }

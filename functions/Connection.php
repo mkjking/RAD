@@ -13,9 +13,7 @@
 		//Variables for connection
 		include 'config.php';
 
-		$nullDatabase = '';
-
-		$conn = mysqli_connect($host,$user,$password,$NullDatabase,$port);
+		$conn = mysqli_connect($host,$user,$password);
 		//Report on connection Status
 		if (!$conn) {
 			echo "<p style=\"font-size: auto\">Connection Status: <span style=\"color: Red\"> Offline</span></p>";
