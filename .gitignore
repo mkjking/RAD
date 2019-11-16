@@ -2,3 +2,5 @@
 image.png
 #Ignore vscode folder
 vscode/*
+#
+.DS_STORE

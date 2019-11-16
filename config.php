@@ -11,10 +11,11 @@
 	<?php
 		
 		//Variables for connection
-		$host = "localhost";			
-		$user = "root";
-		$password = "usbw";
-		$database="rentalmovies_db";
+		$host = "";			
+		$user = "";
+		$password = "";
+		$movieDatabase="rentalmovies_db";
+		$emailDatabase;
 		$port = 3306;
 	?>
 </html>

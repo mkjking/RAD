@@ -13,8 +13,13 @@
 		//Variables for connection
 		include 'config.php';
 
-		//Make connection
-		$conn = mysqli_connect($host,$user,$password, $database, $port);
+		//Make server connection
+		$conn = mysqli_connect($host,$user,$password);
+
+		//Make DB connection to movies
+		if(!mysqli_query($conn, "USE $movieDatabase")) {
+			echo"<p>Database not configured, press IMPORT</p>";
+		}
 
 		//Report on connection Status
 		if (!$conn) {

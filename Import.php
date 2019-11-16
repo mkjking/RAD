@@ -55,22 +55,11 @@
                     
                     //===== Function for creating database =====//
 
-                    //Include variables
-                    include 'config.php';
-                    
-                    //Create a connection 
-                    $conn = mysqli_connect($host,$user,$password);
-                    if (!$conn) {
-                        echo "<p>Failed Initial connection to MySQLDatabase</p>";
-                        exit();
-                    }
-                    //create databnase
+                    //create database
                     $sql = "CREATE DATABASE IF NOT EXISTS rentalmovies_db";
                     //Attempt query
                     if (mysqli_query($conn, $sql) === true) {
 
-                        //Make direct connection to database
-                        $conn = mysqli_connect($host,$user,$password, $database, $port);
                         if (!$conn) {
                             echo "<p>Failed Secondary connection to MySQLDatabase</p>";
                             exit();
