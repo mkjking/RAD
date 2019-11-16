@@ -13,15 +13,25 @@
 		//Variables for connection
 		include 'config.php';
 
-		//Make server connection
-		$conn = mysqli_connect($host,$user,$password,$database,$port);
+		$nullDatabase = '';
 
+		$conn = mysqli_connect($host,$user,$password,$NullDatabase,$port);
 		//Report on connection Status
 		if (!$conn) {
 			echo "<p style=\"font-size: auto\">Connection Status: <span style=\"color: Red\"> Offline</span></p>";
-			echo "<p> Check if SQL server is active otherwise IMPORT database</p>";
+			
 		}else {
 			echo "<p style=\"font-size: auto\">Connection Status: <span style=\"color: Lime\"> Online</span></p>";
+			
+			//Make server connection
+			$conn = mysqli_connect($host,$user,$password,$database,$port);
+
+			//Report on connection Status
+			if (!$conn) {
+				echo "<p style=\"font-size: auto\">Database Status: <span style=\"color: Red\"> Offline</span></p>";
+			}else{
+				echo "<p style=\"font-size: auto\">Database Status: <span style=\"color: Lime\"> Online</span></p>";
+			}
 		}
 	?>
 </html>
