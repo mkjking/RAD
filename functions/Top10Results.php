@@ -11,8 +11,7 @@
     <h1>Top 10 Searched Movies</h1>
 
     <?php 
-        //Select movies DB
-        include 'moviesDB.php';
+        
         //Get Movie Data
         $sql = "SELECT ID, title, searchNo  
                 FROM movies_tbl

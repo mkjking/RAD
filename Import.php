@@ -55,18 +55,21 @@
                     
                     //===== Function for creating database =====//
 
+                    //Variables for connection
+		            include 'config.php';
+
+		            //Make server connection
+		            $conn = mysqli_connect($host,$user,$password);
+
                     //create database
-                    $sql = "CREATE DATABASE IF NOT EXISTS rentalmovies_db";
+                    $sql = "CREATE DATABASE IF NOT EXISTS $database";
+
                     //Attempt query
                     if (mysqli_query($conn, $sql) === true) {
 
-                        if (!$conn) {
-                            echo "<p>Failed Secondary connection to MySQLDatabase</p>";
-                            exit();
-                        }
-                        
                         //select database
-                        include 'functions/moviesDB.php';
+                        $conn = mysqli_connect($host,$user,$password, $database);
+                        
                         $sql = "CREATE TABLE IF NOT EXISTS movies_tbl (
                             ID INTEGER(4),
                             title VARCHAR(50),
@@ -81,6 +84,7 @@
                             aspect VARCHAR(6),
                             searchNo INTEGER(6)
                             )";
+
                         //Run Query
                         if (mysqli_query($conn, $sql) === TRUE) {
                                             

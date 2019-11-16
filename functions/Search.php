@@ -14,7 +14,6 @@
     <?php 
         //Establish a PHP to SQL connection via the "Connection.php" file
         require 'Connection.php';
-        require 'moviesDB.php';
     ?>
 
     <!-- Create all the input boxes that may be needed and placeholders -->

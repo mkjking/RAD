@@ -25,8 +25,8 @@
                 <h1>Movie List:</h1>
 
                 <?php 
-                    require'functions/Connection.php';
-                    require 'functions/moviesDB.php';
+                    require 'functions/Connection.php';
+                    //require 'functions/moviesDB.php';
                     
                     $sql = "SELECT * FROM movies_tbl";
 
