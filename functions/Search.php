@@ -13,7 +13,8 @@
 
     <?php 
         //Establish a PHP to SQL connection via the "Connection.php" file
-        require'Connection.php';
+        require 'Connection.php';
+        require 'moviesDB.php';
     ?>
 
     <!-- Create all the input boxes that may be needed and placeholders -->
@@ -35,7 +36,6 @@
     <?php
         //Perform a check for search button click 
         if (isset($_POST['btnSearch'])){
-
             //Retreive all data from inputs and place into an array
             $searchData = [
                 "movieID" => $_POST["movieID"],

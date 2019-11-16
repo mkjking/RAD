@@ -4,3 +4,5 @@ image.png
 vscode/*
 #
 .DS_STORE
+#config file
+config.php

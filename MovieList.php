@@ -26,12 +26,16 @@
 
                 <?php 
                     require'functions/Connection.php';
-
+                    require 'functions/moviesDB.php';
+                    
                     $sql = "SELECT * FROM movies_tbl";
 
                     //Make query and get result
                     $result = mysqli_query($conn, $sql);
-
+                    if($result === false) {
+                        echo"<p>No data in table</p>";
+                        exit();
+                    }
                     //Create table
                     echo "<table border = '1' align = 'center'>";
                     echo "<th> &nbsp ID &nbsp</th>" 
@@ -46,7 +50,7 @@
                     . "<th> &nbsp Genre &nbsp</th>"
                     . "<th> &nbsp Aspect &nbsp</th>"
                     . "<th> &nbsp Search Count </th>";
-
+                                        
                     //Display table data
                     while ($row = mysqli_fetch_array($result)) {
                         echo "<tr><td> &nbsp" . $row['ID'] . "&nbsp </td>"

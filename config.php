@@ -11,9 +11,9 @@
 	<?php
 		
 		//Variables for connection
-		$host = "";			
-		$user = "";
-		$password = "";
+		$host = "mysql1";			
+		$user = "root";
+		$password = "delical300";
 		$movieDatabase="rentalmovies_db";
 		$emailDatabase;
 		$port = 3306;

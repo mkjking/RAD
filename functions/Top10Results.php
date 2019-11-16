@@ -11,7 +11,8 @@
     <h1>Top 10 Searched Movies</h1>
 
     <?php 
-
+        //Select movies DB
+        include 'moviesDB.php';
         //Get Movie Data
         $sql = "SELECT ID, title, searchNo  
                 FROM movies_tbl
@@ -20,6 +21,12 @@
 
         //Make query and get result
         $result = mysqli_query($conn, $sql);
+
+        //Make sure result isnt false
+        if($result === false) {
+            echo "<p>No data in table</p>";
+            exit();
+        }
 
         //Check for results
         if(Mysqli_num_rows($result) != 0){

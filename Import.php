@@ -64,7 +64,9 @@
                             echo "<p>Failed Secondary connection to MySQLDatabase</p>";
                             exit();
                         }
-
+                        
+                        //select database
+                        include 'functions/moviesDB.php';
                         $sql = "CREATE TABLE IF NOT EXISTS movies_tbl (
                             ID INTEGER(4),
                             title VARCHAR(50),
