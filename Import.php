@@ -34,7 +34,7 @@
                 <div class="work">
 
                     <form action="Import.php" method="post">
-                        <p><input type="submit" name="btnImport" value="Import Movies" onclick="import()" /></p>
+                        <p><input type="submit" name="btnImport" value="Import Movies" onclick="importDatabase()" /></p>
                     </form>
                     
                 </div>
@@ -49,7 +49,7 @@
     </body>
 
     <script>
-        function import() {
+        function importDatabase() {
             <?php
                 if (isset($_POST['btnImport'])){
                     
@@ -107,6 +107,7 @@
                                         SET searchNo = 0";
                                     if (mysqli_query($conn, $sql) === true) {
                                         echo "<p>Import Success</p>";
+                                        header("Refresh:0");
                                     }else {
                                         echo "<p>Import Failure</p>";
                                     }

@@ -22,12 +22,11 @@
 			
 		}else {
 			echo "<p style=\"font-size: auto\">Connection Status: <span style=\"color: Lime\"> Online</span></p>";
-			
-			//Make server connection
-			$conn = mysqli_connect($host,$user,$password,$database,$port);
+
+			$databaseconn = mysqli_query($conn, "USE $database");
 
 			//Report on connection Status
-			if (!$conn) {
+			if (!$databaseconn) {
 				echo "<p style=\"font-size: auto\">Database Status: <span style=\"color: Red\"> Offline</span></p>";
 			}else{
 				echo "<p style=\"font-size: auto\">Database Status: <span style=\"color: Lime\"> Online</span></p>";
