@@ -4,7 +4,7 @@
         This php file is to handle a creation of a new user to the SQL Database.
         To safely represent the content of this file please contain it in a DIV
 
-        Author: Blayde Dietsch
+        Author: Blayde Dietsch, Mitchel King, Noah Jackson
         Date: 16/11/2019
     -->
 
@@ -24,16 +24,53 @@
             //Retreive all data from inputs
             $userName = $_POST["userName"];
             $email = $_POST["email"];
-            $monthlyEmails = (bool)$_POST["monthlyEmails"];
-            $newsEmails = (bool)$_POST["newsEmails"];
+            $monthlyEmails = $_POST["monthlyEmails"];
+            $newsEmails = $_POST["newsEmails"];
+            $emailRegex = "/^[a-z1-9]+(.[a-z1-9]+)@[a-z](.[a-z1-9]+)*((.com.au)|(.com)|(.net))/";
 
-            //Check for validation
-            if(true) {//Condition to be added
-                //To be coded
+            //Turn bool into 1 or 0 for DB
+            if($newsEmails === 'true') {
+                $newsEmails = 1;
             }
             else {
-                echo "<h1>Invalid</h1>";
+                $newsEmails = 0;
             }
+            if($monthlyEmails === 'true') {
+                $monthlyEmails = 1;
+            }
+            else {
+                $monthlyEmails = 0;
+            }
+
+            //Check for validation
+            if(preg_match($emailRegex, $email)) {
+                $sql = "SELECT * 
+                        FROM email_tbl
+                        WHERE email = '$email';";      
+                //Check email
+                $rowResult = mysqli_query($conn, $sql);
+                if(mysqli_num_rows($rowResult)<=0) {
+                    $sql = "INSERT INTO email_tbl
+                            (email, name,
+                            news, blast)
+                            VALUES('$email',
+                            '$userName', '$monthlyEmails',
+                            '$newsEmails'
+                            );";
+
+                    if(!mysqli_query($conn, $sql)) {
+                        echo "<h1>Insert statement error</h1>";
+                        exit();
+                    }
+                    echo "<h1>Account created succesfully</h1>";
+                }
+                else {
+                    echo "<h1>Email already exists</h1>";
+                    }
+            }
+            else {
+                echo "<h1>Invalid Email</h1>";
+               }
         }
 	?>
 </html>
