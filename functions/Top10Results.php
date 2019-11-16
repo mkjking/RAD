@@ -4,7 +4,7 @@
         To safely represent the content of this file please contain it in a DIV
         A connection to the database must be made prior to referencing this!
 
-        Author: Blayde Dietsch
+        AAuthor: Blayde Dietsch, Mitchel King, Noah Jackson
         Date: 12/11/2019
     -->
 

@@ -5,7 +5,7 @@
         This file is a page on its own and should be referenced as such.
         This welcome page includes top 10 results
 
-        Author: Blayde Dietsch
+        Author: Blayde Dietsch, Mitchel King, Noah Jackson
         Date: 12/11/2019
     -->
 

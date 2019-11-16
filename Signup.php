@@ -5,7 +5,7 @@
         This file is a page on its own and should be referenced as such.
         This welcome page allows a user to sign up to the sites account
 
-        Author: Blayde Dietsch
+        Author: Blayde Dietsch, Mitchel King, Noah Jackson
         Date: 16/11/2019
     -->
 

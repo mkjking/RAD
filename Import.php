@@ -4,7 +4,7 @@
         This php file is to handle the IMPORT of a ".csv" file.
         This file is a page on its own and should be referenced as such
 
-        Author: Blayde Dietsch
+        Author: Blayde Dietsch, Mitchel King, Noah Jackson
         Date: 12/11/2019
     -->
 

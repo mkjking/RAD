@@ -4,7 +4,7 @@
         This php file is to handle the SEARCHING task.
         To safely represent the content of this file please contain it in a DIV
 
-        Author: Blayde Dietsch
+        Author: Blayde Dietsch, Mitchel King, Noah Jackson
         Date: 12/11/2019
     -->
 

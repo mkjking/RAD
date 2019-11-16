@@ -4,7 +4,7 @@
         This php file is to handle representation of a FOOTER.
         To safely represent the content of this file please contain it in a FOOTER
 
-        Author: Blayde Dietsch
+        Author: Blayde Dietsch, Mitchel King, Noah Jackson
         Date: 12/11/2019
     -->
 
