@@ -19,7 +19,8 @@
                 <li><a href="Index.php">Home</a></li>                 
                 <li><a href="Import.php">Import</a></li>
                 <li><a href="MovieList.php">Movie List</a></li>
-                <li><a href="MoviesSearch.php">Search</a></li>               
+                <li><a href="MoviesSearch.php">Search</a></li>
+                <li><a href="Admin.php">Admin Login</a></li>               
             </ul>
         </nav>
     </div>

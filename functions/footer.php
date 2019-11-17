@@ -10,6 +10,8 @@
 
     <div class="footerContainer"> 
         <p> &nbsp Program provided by: Blayde Dietsch, Noah Jackson and Mitchel King &nbsp</p>
+        
+        <a href="Unsubscribe.php"><p class="unsub">Unsubscribe from newsletter</p></a>
     </div>
 
 </html>
