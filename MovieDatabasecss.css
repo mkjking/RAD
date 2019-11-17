@@ -107,7 +107,7 @@ nav li {
     
     border: 2px solid rgb(19, 19, 19);
     display: inline-block;
-    margin-left: 60px;
+    margin-left: 50px;
     margin-top: 26px;
     padding: 3px;
 
@@ -181,6 +181,8 @@ table {
     width: 90%;
     text-align: center;
     margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 img {
@@ -272,7 +274,7 @@ img {
         
         border: 2px solid rgb(19, 19, 19);
         display: inline-block;
-        margin-left: 60px;
+        margin-left: 30px;
         margin-top: 26px;
         padding: 3px;
 
@@ -337,6 +339,8 @@ img {
         width: 90%;
         text-align: center;
         margin: 0 auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 
     
@@ -361,7 +365,9 @@ img {
 
     .headerContainer {
         width: 90%;
+        height: 130px;
         margin: 0 auto;
+        align-content: center;
     }
 
     .title {
@@ -405,7 +411,8 @@ img {
 
     nav {
         margin: auto;
-        position: absolute;
+        position: relative;
+        width: 500px;
         margin-top: 0px;
         margin-bottom: 5px;
         float: none;
@@ -423,6 +430,7 @@ img {
         border: 1px solid rgb(19, 19, 19);
         display: inline-block;
         margin-top: 18px;
+        margin-left: 20px;
         padding: 2px;
 
         position: relative;
@@ -437,7 +445,7 @@ img {
 
         font-size: 14px;
 
-        position: absolute;
+        position: relative;
         top: -2.5px;
     }
 
@@ -501,6 +509,8 @@ img {
         width: 90%;
         text-align: center;
         margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     img {
@@ -520,12 +530,13 @@ img {
     }
 
     header {
-        height: 100px;
+        height: auto;
     }
 
     .headerContainer {
         width: 90%;
         margin: 0 auto;
+        height: auto;
     }
 
     .title {
@@ -570,7 +581,8 @@ img {
 
     nav {
         margin: auto;
-        position: absolute;
+        position: relative;
+        width: auto;
         margin-top: 0px;
         margin-bottom: 5px;
         float: none;
@@ -585,11 +597,11 @@ img {
 
     nav li {
         
-        border: 2px solid rgb(19, 19, 19);
+        border: 1px solid rgb(19, 19, 19);
         display: inline-block;
-        margin-left: 60px;
-        margin-top: 9px;
-        padding: 1px;
+        margin-top: 18px;
+        margin-left: 20px;
+        padding: 2px;
 
         position: relative;
     }
@@ -598,12 +610,12 @@ img {
         color: rgb(50, 50, 50);
         text-decoration: none;
         text-transform: uppercase;
-        text-shadow: -1px 0 2px white, 0 1px 2px white, 1px 0 2px white, 0 -1px 1px white;
+        text-shadow: -1px 0 2px white, 0 1px 2px white, 1px 0 2px white, 0 -1px 2px white;
         font-weight: bolder;
 
-        font-size: 10px;
+        font-size: 14px;
 
-        position: absolute;
+        position: relative;
         top: -2.5px;
     }
 
@@ -660,13 +672,15 @@ img {
     .container {
         border: 3px solid black;
         margin: auto;
-        margin-top: 130px;
+        margin-top: 160px;
     }
 
     .content {
         width: 90%;
         text-align: center;
         margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     img {
