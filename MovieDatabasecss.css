@@ -69,6 +69,17 @@ p {
     color: white;
 }
 
+p.unsub  {
+    font-size: 10px;
+    
+    font-family: Righteous;
+    margin: 3px;
+
+    text-decoration: none;
+
+    color: white;
+}
+
 /*========================================= CONTROLS/BUTTONS/ANIMATIONS CSS =========================================*/
 
 input[type=button], input[type=submit], input[type=reset] {
