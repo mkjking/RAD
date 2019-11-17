@@ -2,7 +2,9 @@
 image.png
 #Ignore vscode folder
 vscode/*
-#Ignore DS Strore
+.vscode/launch.json
+#Ignore DS Store
 .DS_STORE
 #config file
 config.php
+
