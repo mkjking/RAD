@@ -62,20 +62,31 @@ h1 {
 
 p {
     font-size: 20px;
-    
-    font-family: Righteous;
+
+    font-family: Babus;
     margin: 3px;
 
     color: white;
 }
 
 p.unsub  {
-    font-size: 10px;
+    font-size: 18px;
     
-    font-family: Righteous;
+    font-family: Babus;
     margin: 3px;
+    text-align: center;
 
     text-decoration: none;
+
+    color: white;
+}
+
+p.provided {
+    font-size: 20px;
+    text-align: center;
+
+    font-family: Babus;
+    margin: 5px;
 
     color: white;
 }
@@ -170,7 +181,7 @@ nav a:hover::before {
 /*========================================= OTHER CSS =========================================*/
 
 table {
-    font-family: Gruppo;
+    font-family: Geometos;
     color: white;
     border: 3px solid black;
     margin: auto;
@@ -213,6 +224,16 @@ img {
     src: url(fonts/Righteous-Regular.ttf)
 }
 
+@font-face {
+    font-family: Babus;
+    src: url(fonts/BN-Regular.ttf);
+}
+
+@font-face {
+    font-family: Geometos;
+    src: url(fonts/Geometos.ttf);
+}
+
 /*========================================= SCREENS =========================================*/
 
 /*================================================================== 1500 ==================================================================*/
@@ -226,7 +247,7 @@ img {
     }
 
     footer {
-        border:  3px solid black;
+        border:3px solid black;
         margin: auto;
         margin-top: 20px;
         margin-bottom: 20px;
@@ -337,7 +358,7 @@ img {
     /*=================== OTHER CSS ==================*/
 
     table {
-        font-family: Gruppo;
+        font-family: Geometos;
     }
 
     .container {
@@ -492,7 +513,7 @@ img {
     /*=================== OTHER CSS ==================*/
 
     table {
-        font-family: Gruppo;
+        font-family: Geometos;
         font-size: 12px;
         border: 1px solid  black;
         padding: 0px;
@@ -662,7 +683,7 @@ img {
     /*=================== OTHER CSS ==================*/
 
     table {
-        font-family: Gruppo;
+        font-family: Geometos;
         font-size: 8px;
         border: 1px solid  black;
         padding: 0px;

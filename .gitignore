@@ -7,4 +7,6 @@ vscode/*
 .DS_STORE
 #config file
 config.php
+#Ignore idea folder
+.idea
 
