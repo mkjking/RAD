@@ -32,7 +32,11 @@
             </div>
             <div class="content">
                 <?php 
-                    require'functions/AdminLogin.php';
+                    require('functions/AdminLogin.php');
+
+                    if($loginStatus === true){
+                        header("Location: AdminControl.php");
+                    }
                 ?>
             </div>
         </div>

@@ -13,11 +13,8 @@
 		//Variables for connection
 		$host = "localhost";			
 		$user = "root";
-		$password = "";
+		$password = "usbw";
 		$database= "rentalmovies_db";
 		$port = 3306;
-
-		//Other Variables
-		$adminPassword = "password";
 	?>
 </html>

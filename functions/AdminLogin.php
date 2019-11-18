@@ -15,6 +15,9 @@
     </form>
 
 	<?php
+
+        $loginStatus = false;
+
 		//Perform a check for button click 
         if (isset($_POST['btnLogin'])){
 
@@ -32,7 +35,7 @@
             }
             
             if ($passwordEntered === $adminPassword){
-                require "functions/AdminControl.php";
+                $loginStatus=true;
             }else{
                 echo "<p style=\"font-size: 20px\"><span style=\"color: Red\"> Password Incorrect</span></p>";
             }
