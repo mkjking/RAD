@@ -10,8 +10,8 @@
 
 
     <form action="Admin.php" method="post">
-        <p>Password: <input type="text" name="password" placeholder=""></p>
-        <p><input type="submit" name="btnLogin" value="Login" /></p>
+        <label>Password: </label><input type="text" name="password" placeholder=""><br>
+        <input type="submit" name="btnLogin" value="Login" />
     </form>
 
 	<?php
@@ -21,12 +21,20 @@
             //Retreive password from input
             $passwordEntered = $_POST["password"];
 
-            include "config.php";
+            $sql = "SELECT *
+                    FROM admin_tbl";
+
+            $result = mysqli_query($conn, $sql);
+
+            if ($row = mysqli_fetch_assoc($result))
+            {
+                $adminPassword = $row['Password'];
+            }
             
             if ($passwordEntered === $adminPassword){
                 require "functions/AdminControl.php";
             }else{
-                echo "<p style=\"font-size: auto\"><span style=\"color: Red\"> Password Incorrect</span></p>";
+                echo "<p style=\"font-size: 20px\"><span style=\"color: Red\"> Password Incorrect</span></p>";
             }
         }
 	?>

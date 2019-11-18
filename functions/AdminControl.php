@@ -7,21 +7,39 @@
         Author: Blayde Dietsch, Mitchel King, Noah Jackson
         Date: 16/11/2019
     -->
-
-
     <form action="Admin.php" method="post">
-        <p>User Email to Remove <input type="text" name="email" placeholder=""></p>
-        <p><input type="submit" name="btnRemove" value="Remove" /></p>
+        <label>Admin Password: </label><input type="text" name="adminPassword" placeholder=""><br>
+        <input type="submit" name="btnChange" value="Change"/>
+    </form>
+    <form action="Admin.php" method="post">
+        <label>User Email to Remove: </label><input type="text" name="userEmail" placeholder=""><br>
+        <input type="submit" name="btnRemove" value="Remove"/>
     </form>
 
 	<?php
-		//Perform a check for button click 
-        if (isset($_POST['btnSignup'])){
+        //CHANGE EMAIL/PASSWORD
+        if (isset($_POST['btnChange'])){
+            $newPassword = $_POST['adminPassword'];
 
-            //Retreive password from input
-            $email = $_POST["email"];
+            $sql = "UPDATE admin_tbl
+                    SET `Password`='$newPassword'
+                    WHERE Email='acmetestsmtafe@gmail.com'";
+            mysqli_query($conn, $sql);
 
-            //CODE TO REMOVE ACCOUNT FROM DATABASE
+
+
+        }
+
+		//REMOVE USER
+        if (isset($_POST['btnRemove'])){
+
+            //Retreive user email from input
+            $email = $_POST["userEmail"];
+
+            $sql = "DELETE FROM email_tbl
+                    WHERE Email = '$email'";
+
+            //TODO: Execute the query
         }
 	?>
 </html>

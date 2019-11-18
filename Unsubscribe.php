@@ -24,7 +24,7 @@
 
         <div class="container">
             <div class="content">
-                <h1>Unsubscribe?!?</h1>
+                <h1>Unsubscribe?</h1>
 
                 <?php 
                     require'functions/Connection.php';
@@ -33,18 +33,21 @@
 
             <div class="content">
                 <form action="Unsubscribe.php" method="post">
-                    <p>User Email to Remove <input type="text" name="email" placeholder="JohnSmith@email.com"></p>
-                    <p><input type="submit" name="btnRemove" value="Request Remove" /></p>
+                    <label>Enter email to request cancellation: </label>
+                    <input type="text" name="email" placeholder="JohnSmith@email.com"><br>
+                    <p class="note">Note: Your account will be permanently deleted, <br>
+                    and you will have to signup again to resubscribe.</p>
+                    <input type="submit" name="btnRemove" value="Request Cancellation" />
                 </form>
 
                 <?php
                     //Perform a check for button click 
-                    if (isset($_POST['btnSignup'])){
+                    if (isset($_POST['btnRemove'])){
 
                         //Retreive password from input
                         $email = $_POST["email"];
 
-                        //CODE TO REQUEST REMOVE ACCOUNT FROM DATABASE
+                        require 'functions/SendEmail.php';
                     }
                 ?>
             </div>

@@ -26,7 +26,7 @@
             <div class="content">
                 <h1>Sign up!</h1>
 
-                <p>Welcome to the signup page, here you can create an account with us and choose to receive the monthly email or News blast emails!
+                <p>Welcome to our signup page, here you can create an account with us and opt into our Newsletter or Monthly Movie Blasts!
                 </p>
 
                 <?php 
