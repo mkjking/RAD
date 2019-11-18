@@ -181,7 +181,9 @@ nav a:hover::before {
 /*========================================= OTHER CSS =========================================*/
 
 table {
-    font-family: Geometos;
+    font-family: Babus;
+    font-size: large;
+    padding: 1px;
     color: white;
     border: 3px solid black;
     margin: auto;
@@ -358,7 +360,7 @@ img {
     /*=================== OTHER CSS ==================*/
 
     table {
-        font-family: Geometos;
+        font-size: 16px;
     }
 
     .container {
@@ -513,8 +515,7 @@ img {
     /*=================== OTHER CSS ==================*/
 
     table {
-        font-family: Geometos;
-        font-size: 12px;
+        font-size: 14px;
         border: 1px solid  black;
         padding: 0px;
 
@@ -683,8 +684,7 @@ img {
     /*=================== OTHER CSS ==================*/
 
     table {
-        font-family: Geometos;
-        font-size: 8px;
+        font-size: 12px;
         border: 1px solid  black;
         padding: 0px;
 
