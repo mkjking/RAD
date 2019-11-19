@@ -35,7 +35,16 @@
                     require('functions/AdminLogin.php');
 
                     if($loginStatus === true){
-                        header("Location: AdminControl.php");
+                        echo' <form action="AdminControl.php" method="post">
+                                  <label>Change Admin Password: </label><input type="text" name="adminPassword" placeholder=""><br>
+                                  <input type="submit" name="btnChange" value="Change"/>
+                              </form>
+                              <form action="AdminControl.php" method="post">
+                                   <label>User Email to Remove: </label><input type="text" name="userEmail" placeholder=""><br>
+                                  <input type="submit" name="btnRemove" value="Remove"/>
+                              </form>';
+                              
+                        include'functions/Usertable.php';
                     }
                 ?>
             </div>
