@@ -2,3 +2,11 @@
 image.png
 #Ignore vscode folder
 vscode/*
+.vscode/launch.json
+#Ignore DS Store
+.DS_STORE
+#config file
+config.php
+#Ignore idea folder
+.idea
+

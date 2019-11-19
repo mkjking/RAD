@@ -4,14 +4,14 @@
         To safely represent the content of this file please contain it in a DIV
         A connection to the database must be made prior to referencing this!
 
-        Author: Blayde Dietsch
+        AAuthor: Blayde Dietsch, Mitchel King, Noah Jackson
         Date: 12/11/2019
     -->
 
     <h1>Top 10 Searched Movies</h1>
 
     <?php 
-
+        
         //Get Movie Data
         $sql = "SELECT ID, title, searchNo  
                 FROM movies_tbl
@@ -20,6 +20,12 @@
 
         //Make query and get result
         $result = mysqli_query($conn, $sql);
+
+        //Make sure result isnt false
+        if($result === false) {
+            echo "<p>No data in table</p>";
+            exit();
+        }
 
         //Check for results
         if(Mysqli_num_rows($result) != 0){
@@ -43,7 +49,7 @@
             $barWidth = 25;
 
             // Font settings
-            $font = realpath('fonts/Righteous-Regular.ttf');
+            $font = realpath('fonts/BN-Regular.ttf');
             $fontSize = 14;
             
             //Max value on y-axis

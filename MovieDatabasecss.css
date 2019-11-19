@@ -9,7 +9,7 @@
 
 body {
     margin: 0;
-    background-color: rgb(54, 57, 63);
+    background-color: rgb(65, 65, 65);
 }
 
 header {
@@ -31,6 +31,7 @@ footer {
     margin-top: 20px;
     margin-bottom: 20px;
     width: 90%;
+    background-color: rgb(48, 48, 48);
 }
 
 .headerContainer {
@@ -62,11 +63,44 @@ h1 {
 
 p {
     font-size: 20px;
-    
-    font-family: Righteous;
+
+    font-family: Babus;
     margin: 3px;
 
     color: white;
+}
+
+p.unsub  {
+    font-size: 22px;
+    
+    font-family: Babus;
+    margin: 3px;
+    text-align: center;
+    text-shadow: -1px 0 2px grey, 0 1px 2px grey, 1px 0 2px grey, 0 -1px 2px grey;
+
+    text-decoration: none;
+
+    color: white;
+}
+
+p.provided {
+    font-size: 20px;
+    text-align: center;
+
+    font-family: Babus;
+    margin: 5px;
+
+    color: white;
+}
+
+p.note {
+    font-size: 16px;
+    text-align: center;
+
+    font-family: Gruppo;
+    margin: 5px;
+
+    color: red;
 }
 
 /*========================================= CONTROLS/BUTTONS/ANIMATIONS CSS =========================================*/
@@ -85,6 +119,24 @@ input[type=button], input[type=submit], input[type=reset] {
     box-shadow: -1px 0 2px grey, 0 1px 2px grey, 1px 0 2px grey, 0 -1px 2px grey;
 
     border-radius: 20px;
+}
+
+input[type=text] {
+    display: inline-block;
+}
+
+label {
+    font-size: 20px;
+
+    font-family: Babus;
+    margin-right: 2px;
+
+    color: white;
+    display: inline-block;
+
+    clear: left;
+    width: 100%;
+    text-align: center;
 }
 
 header ::after {
@@ -107,7 +159,7 @@ nav li {
     
     border: 2px solid rgb(19, 19, 19);
     display: inline-block;
-    margin-left: 60px;
+    margin-left: 50px;
     margin-top: 26px;
     padding: 3px;
 
@@ -159,7 +211,9 @@ nav a:hover::before {
 /*========================================= OTHER CSS =========================================*/
 
 table {
-    font-family: Gruppo;
+    font-family: Babus;
+    font-size: large;
+    padding: 1px;
     color: white;
     border: 3px solid black;
     margin: auto;
@@ -168,9 +222,10 @@ table {
 
 .container {
     border: 3px solid black;
-    background-color: rgb(47, 49, 54);
+    background-color: rgb(48, 48, 48);
     margin: auto;
     width: 90%;
+
 
     margin-top: 120px;
      
@@ -181,6 +236,8 @@ table {
     width: 90%;
     text-align: center;
     margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 img {
@@ -200,6 +257,16 @@ img {
     src: url(fonts/Righteous-Regular.ttf)
 }
 
+@font-face {
+    font-family: Babus;
+    src: url(fonts/BN-Regular.ttf);
+}
+
+@font-face {
+    font-family: Geometos;
+    src: url(fonts/Geometos.ttf);
+}
+
 /*========================================= SCREENS =========================================*/
 
 /*================================================================== 1500 ==================================================================*/
@@ -213,7 +280,7 @@ img {
     }
 
     footer {
-        border:  3px solid black;
+        border:3px solid black;
         margin: auto;
         margin-top: 20px;
         margin-bottom: 20px;
@@ -272,7 +339,7 @@ img {
         
         border: 2px solid rgb(19, 19, 19);
         display: inline-block;
-        margin-left: 60px;
+        margin-left: 30px;
         margin-top: 26px;
         padding: 3px;
 
@@ -324,7 +391,7 @@ img {
     /*=================== OTHER CSS ==================*/
 
     table {
-        font-family: Gruppo;
+        font-size: 16px;
     }
 
     .container {
@@ -337,6 +404,8 @@ img {
         width: 90%;
         text-align: center;
         margin: 0 auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 
     
@@ -361,7 +430,9 @@ img {
 
     .headerContainer {
         width: 90%;
+        height: 130px;
         margin: 0 auto;
+        align-content: center;
     }
 
     .title {
@@ -379,7 +450,7 @@ img {
     }
 
     p {
-        font-size: 15px;
+        font-size: 13.5px;
         margin: 1px;
     }
     
@@ -405,7 +476,8 @@ img {
 
     nav {
         margin: auto;
-        position: absolute;
+        position: relative;
+        width: 500px;
         margin-top: 0px;
         margin-bottom: 5px;
         float: none;
@@ -423,6 +495,7 @@ img {
         border: 1px solid rgb(19, 19, 19);
         display: inline-block;
         margin-top: 18px;
+        margin-left: 20px;
         padding: 2px;
 
         position: relative;
@@ -437,7 +510,7 @@ img {
 
         font-size: 14px;
 
-        position: absolute;
+        position: relative;
         top: -2.5px;
     }
 
@@ -473,8 +546,7 @@ img {
     /*=================== OTHER CSS ==================*/
 
     table {
-        font-family: Gruppo;
-        font-size: 12px;
+        font-size: 14px;
         border: 1px solid  black;
         padding: 0px;
 
@@ -501,6 +573,8 @@ img {
         width: 90%;
         text-align: center;
         margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     img {
@@ -520,12 +594,13 @@ img {
     }
 
     header {
-        height: 100px;
+        height: auto;
     }
 
     .headerContainer {
         width: 90%;
         margin: 0 auto;
+        height: auto;
     }
 
     .title {
@@ -544,7 +619,7 @@ img {
     }
 
     p {
-        font-size: 10px;
+        font-size: 9px;
         margin: 0.5px;
     }
 
@@ -570,7 +645,8 @@ img {
 
     nav {
         margin: auto;
-        position: absolute;
+        position: relative;
+        width: auto;
         margin-top: 0px;
         margin-bottom: 5px;
         float: none;
@@ -585,11 +661,11 @@ img {
 
     nav li {
         
-        border: 2px solid rgb(19, 19, 19);
+        border: 1px solid rgb(19, 19, 19);
         display: inline-block;
-        margin-left: 60px;
-        margin-top: 9px;
-        padding: 1px;
+        margin-top: 18px;
+        margin-left: 20px;
+        padding: 2px;
 
         position: relative;
     }
@@ -598,12 +674,12 @@ img {
         color: rgb(50, 50, 50);
         text-decoration: none;
         text-transform: uppercase;
-        text-shadow: -1px 0 2px white, 0 1px 2px white, 1px 0 2px white, 0 -1px 1px white;
+        text-shadow: -1px 0 2px white, 0 1px 2px white, 1px 0 2px white, 0 -1px 2px white;
         font-weight: bolder;
 
-        font-size: 10px;
+        font-size: 14px;
 
-        position: absolute;
+        position: relative;
         top: -2.5px;
     }
 
@@ -639,8 +715,7 @@ img {
     /*=================== OTHER CSS ==================*/
 
     table {
-        font-family: Gruppo;
-        font-size: 8px;
+        font-size: 12px;
         border: 1px solid  black;
         padding: 0px;
 
@@ -660,13 +735,15 @@ img {
     .container {
         border: 3px solid black;
         margin: auto;
-        margin-top: 130px;
+        margin-top: 160px;
     }
 
     .content {
         width: 90%;
         text-align: center;
         margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     img {

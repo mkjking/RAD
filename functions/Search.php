@@ -4,7 +4,7 @@
         This php file is to handle the SEARCHING task.
         To safely represent the content of this file please contain it in a DIV
 
-        Author: Blayde Dietsch
+        Author: Blayde Dietsch, Mitchel King, Noah Jackson
         Date: 12/11/2019
     -->
 
@@ -13,29 +13,28 @@
 
     <?php 
         //Establish a PHP to SQL connection via the "Connection.php" file
-        require'Connection.php';
+        require 'Connection.php';
     ?>
 
     <!-- Create all the input boxes that may be needed and placeholders -->
     <form action="MoviesSearch.php" method="post">
-        <p>MovieID: <input type="text" name="movieID" placeholder="248"></p>
-        <p>Title: <input type="text" name="title" placeholder="Dead Bang"></p>
-        <p>Studio: <input type="text" name="studio" placeholder="Warner Brothers"></p>
-        <p>Status: <input type="text" name="status" placeholder="Out"></p>
-        <p>Sound: <input type="text" name="sound" placeholder="SUR"></p>
-        <p>Versions: <input type="text" name="versions" placeholder="4:3"></p>
-        <p>RecRetPrice: <input type="text" name="recRetPrice" placeholder="9.99"></p>
-        <p>Rating: <input type="text" name="rating" placeholder="R"></p>
-        <p>Year: <input type="text" name="year" placeholder="1989"></p>
-        <p>Genre: <input type="text" name="genre" placeholder="Action/Adventure"></p>
-        <p>Aspect: <input type="text" name="aspect" placeholder="1.33:1"></p>
-        <p><input type="submit" name="btnSearch" value="Search" /></p>
+        <label>MovieID: </label><input type="text" name="movieID" placeholder="248"><br>
+            <label>Title: </label><input type="text" name="title" placeholder="Dead Bang"><br>
+            <label>Studio: </label><input type="text" name="studio" placeholder="Warner Brothers"><br>
+            <label>Status: </label><input type="text" name="status" placeholder="Out"><br>
+            <label>Sound: </label><input type="text" name="sound" placeholder="SUR"><br>
+            <label>Versions: </label><input type="text" name="versions" placeholder="4:3"><br>
+            <label>Price: </label><input type="text" name="recRetPrice" placeholder="9.99"><br>
+            <label>Rating: </label><input type="text" name="rating" placeholder="R"><br>
+            <label>Year: </label><input type="text" name="year" placeholder="1989"><br>
+            <label>Genre: </label><input type="text" name="genre" placeholder="Action/Adventure"><br>
+            <label>Aspect: </label><input type="text" name="aspect" placeholder="1.33:1"><br>
+            <input type="submit" name="btnSearch" value="Search" />
     </form>
 
     <?php
         //Perform a check for search button click 
         if (isset($_POST['btnSearch'])){
-
             //Retreive all data from inputs and place into an array
             $searchData = [
                 "movieID" => $_POST["movieID"],

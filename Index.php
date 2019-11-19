@@ -5,7 +5,7 @@
         This file is a page on its own and should be referenced as such.
         This welcome page includes top 10 results
 
-        Author: Blayde Dietsch
+        Author: Blayde Dietsch, Mitchel King, Noah Jackson
         Date: 12/11/2019
     -->
 
@@ -40,6 +40,11 @@
                 <?php
                     require'functions/Top10Results.php';
                 ?>
+            </div>
+            <div class="content">
+                <!--Signup page link-->
+                <p >Want to receive newsletters and other information about movies? Click below to signup for our Newsletter program!</p>
+                <a href="Signup.php"><h1>SIGNUP!</h1></a>
             </div>
         </div>
         
