@@ -130,6 +130,14 @@
                                 if(!mysqli_query($conn, $sql)) {
                                     echo "<p>Failed email Table Creation</p>";
                                 }
+
+                        $sql = "CREATE TABLE IF NOT EXISTS admin_tbl (
+                                Email VARCHAR(50),
+                                Password VARCHAR(50));";
+
+                                if(!mysqli_query($conn, $sql)) {
+                                    echo "<p>Failed admin Table Creation</p>";
+                                }
                     } else {
                         echo "<p>Failed Database Creation</p>";
                     }
