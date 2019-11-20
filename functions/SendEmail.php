@@ -48,19 +48,19 @@
             $result = mysqli_query($conn, $sql);
             if ($row = mysqli_fetch_assoc($result) > 0) {
                 $user = $row["name"];
-            } else {
-                echo "<p class='note'>NO ACCOUNT WITH THAT EMAIL</p>";
-            }
+                //message sent in the email
+                $message = "User " . $user . " has requested to cancel their subscription. \nLogin into the admin page and enter the email " . $email . " to cancel their subscription";
 
-            //message sent in the email
-            $message = "User " . $user . " has requested to cancel their subscription. \nLogin into the admin page and enter the email " . $email . " to cancel their subscription";
-
-            //actually send the email
-            $mail->Subject = "Subscription Cancel Request";
-            $mail->Body = $message;
-            $mail->send();
-
+                //actually send the email
+                $mail->Subject = "Subscription Cancel Request";
+                $mail->Body = $message;
+                $mail->send();
             echo "<p>Email Sent to Admin</p>";
+            }
+            else {
+                echo "<p class='note'>NO ACCOUNT WITH THAT EMAIL</p>";
+                exit();
+            }
         } catch (Exception $e) {
             echo $e;
     }
