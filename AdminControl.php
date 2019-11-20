@@ -63,10 +63,19 @@
                         //Retreive user email from input
                         $email = $_POST["userEmail"];
 
-                        $sql = "DELETE FROM email_tbl
-                                WHERE Email = '$email'";
+                        $sql = "SELECT * FROM email_tbl
+                                WHERE email = '$email'";
 
-                        //TODO: Execute the query
+                        $result = mysqli_query($conn, $sql);
+                        if(mysqli_num_rows($result)<=0) {
+                            echo "<p style=\"font-size: auto\"><span style=\"color: Red\"> Email Doesnt Exist!</span></p>";
+                        }
+                        else {
+                            $sql = "DELETE FROM email_tbl
+                                    WHERE email = '$email'";
+                            mysqli_query($conn, $sql);
+                            echo "<p style=\"font-size: auto\"><span style=\"color: Lime\"> Email Removed!</span></p>";
+                        }
                     }
                 ?>
             </div>
