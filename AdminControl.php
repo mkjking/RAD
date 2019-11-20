@@ -31,16 +31,6 @@
             </div>
             <div class="content">
 
-
-                <form action="AdminControl.php" method="post">
-                    <label>Change Admin Password: </label><input type="text" name="adminPassword" placeholder=""><br>
-                    <input type="submit" name="btnChange" value="Change"/>
-                </form>
-                <form action="AdminControl.php" method="post">
-                    <label>User Email to Remove: </label><input type="text" name="userEmail" placeholder=""><br>
-                    <input type="submit" name="btnRemove" value="Remove"/>
-                </form>
-
                 <?php
                     //CHANGE EMAIL/PASSWORD
                     if (isset($_POST['btnChange'])){
@@ -51,10 +41,11 @@
                                 WHERE Email='acmetestsmtafe@gmail.com'";
 
                         if (mysqli_query($conn, $sql)){
-                            echo "<p style=\"font-size: auto\"><span style=\"color: Lime\"> Password Changed!</span></p>";
+                            echo "<p><span style=\"color: Lime\"> Password Changed!</span></p>";
                         }else{
-                            echo "<p style=\"font-size: auto\"><span style=\"color: Red\"> Failed to change password!</span></p>";
+                            echo "<p><span style=\"color: Red\"> Failed to change password!</span></p>";
                         }
+                        echo "<p class='unsub'><a href='Admin.php'>Back to Admin Page</a></p>";
                     }
 
                     //REMOVE USER
@@ -68,23 +59,19 @@
 
                         $result = mysqli_query($conn, $sql);
                         if(mysqli_num_rows($result)<=0) {
-                            echo "<p style=\"font-size: auto\"><span style=\"color: Red\"> Email Doesnt Exist!</span></p>";
+                            echo "<p><span style=\"color: Red\"> Email Doesnt Exist!</span></p>";
                         }
                         else {
                             $sql = "DELETE FROM email_tbl
                                     WHERE email = '$email'";
                             mysqli_query($conn, $sql);
-                            echo "<p style=\"font-size: auto\"><span style=\"color: Lime\"> Email Removed!</span></p>";
+                            echo "<p><span style=\"color: Lime\"> Email Removed!</span></p>";
                         }
+                        echo "<p class='unsub'><a href='Admin.php'>Back to Admin Page</a></p>";
                     }
                 ?>
             </div>
         </div>
-        
-        <footer>
-            <?php
-                require_once'functions/footer.php'; 
-            ?>      
-        </footer>
+
     </body>
 </html>

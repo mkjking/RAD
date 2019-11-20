@@ -27,24 +27,27 @@
                 <h1>Admin Control</h1>
 
                 <?php 
-                    require'functions/Connection.php';
+                    require 'functions/Connection.php';
                 ?>
             </div>
             <div class="content">
                 <?php 
                     require('functions/AdminLogin.php');
-
-                    if($loginStatus === true){
+                    //CHECK FOR LOGIN
+                    if($loginStatus === true) {
+                        //PASSWORD AND REMOVE FORMS
                         echo' <form action="AdminControl.php" method="post">
-                                  <label>Change Admin Password: </label><input type="text" name="adminPassword" placeholder=""><br>
+                                  <label>Change Admin Password: </label><input type="text" name="adminPassword"><br>
                                   <input type="submit" name="btnChange" value="Change"/>
                               </form>
                               <form action="AdminControl.php" method="post">
-                                   <label>User Email to Remove: </label><input type="text" name="userEmail" placeholder=""><br>
+                                   <label>User Email to Remove: </label><input type="text" name="userEmail"><br>
                                   <input type="submit" name="btnRemove" value="Remove"/>
                               </form>';
-                              
-                        include'functions/Usertable.php';
+
+                        //USER TABLE
+                        echo "<h1>SUBSCRIBED USERS</h1>";
+                        require 'functions/Usertable.php';
                     }
                 ?>
             </div>
@@ -52,7 +55,7 @@
         
         <footer>
             <?php
-                require_once'functions/footer.php'; 
+                require 'functions/footer.php';
             ?>      
         </footer>
     </body>

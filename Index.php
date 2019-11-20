@@ -24,12 +24,12 @@
 
         <div class="container">
             <div class="content">
-                <h1>Welcome To The Home Menu</h1>
+                <h1>Welcome To ACME Entertainment Movies</h1>
 
                 <p>Welcome to the database for the Rental Movie Collection.
-                   This database can provide you with all the relevant information 
+                   This website can provide you with all the relevant information
                    regarding the movies held within the database. Below you can see
-                    the top 10 movies searched all time. 
+                    the top 10 movies searched of all time.
                 </p>
 
                 <?php 

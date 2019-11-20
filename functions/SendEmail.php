@@ -47,9 +47,9 @@
                     WHERE email = '$email';";
             $result = mysqli_query($conn, $sql);
             if ($row = mysqli_fetch_assoc($result) > 0) {
-                $user = $row["name"];
+                $name = $row['name'];
                 //message sent in the email
-                $message = "User " . $user . " has requested to cancel their subscription. \nLogin into the admin page and enter the email " . $email . " to cancel their subscription";
+                $message = "A user has requested to cancel their subscription. \nLogin into the admin page and enter the email " . $email . " to cancel their subscription";
 
                 //actually send the email
                 $mail->Subject = "Subscription Cancel Request";

@@ -50,6 +50,7 @@ footer {
 }
 
 h1 {
+    font-family: Geometos;
     font-Size: 2.5em;
     font-weight: bold;   
     margin: 3px;
@@ -157,7 +158,7 @@ nav ul {
 
 nav li {
     
-    border: 2px solid rgb(19, 19, 19);
+    /*border: 2px solid rgb(19, 19, 19);*/
     display: inline-block;
     margin-left: 50px;
     margin-top: 26px;
@@ -492,7 +493,7 @@ img {
 
     nav li {
         
-        border: 1px solid rgb(19, 19, 19);
+        border: 0px solid rgb(19, 19, 19);
         display: inline-block;
         margin-top: 18px;
         margin-left: 20px;

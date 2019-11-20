@@ -12,8 +12,8 @@
     <form action="Signup.php" method="post">
         <p>Full Name: <input type="text" name="userName" placeholder="John Smith"></p>
         <p>Email: <input type="text" name="email" placeholder="JohnSmith@email.com"></p>
-        <p>Receive monthly emails?: Yes Please<input type="radio" name="monthlyEmails" value="true" checked> No Thanks<input type="radio" name="monthlyEmails" value="false"></p>
-        <p>Receive News Blast emails?: Yes Please<input type="radio" name="newsEmails" value="true" checked> No Thanks<input type="radio" name="newsEmails" value="false"></p>
+        <p>Receive Monthly Newsletter?: Yes Please<input type="radio" name="monthlyEmails" value="true" checked> No Thanks<input type="radio" name="monthlyEmails" value="false"></p>
+        <p>Receive Movie Blasts?: Yes Please<input type="radio" name="newsEmails" value="true" checked> No Thanks<input type="radio" name="newsEmails" value="false"></p>
         <p><input type="submit" name="btnSignup" value="Sign Up!" /></p>
     </form>
 
@@ -43,14 +43,17 @@
             }
 
             //Check for validation
-            if(preg_match($emailRegex, $email)) {
-                $sql = "SELECT * 
+            if ($monthlyEmails == 0 && $newsEmails == 0) {
+                echo "<p class='note'>YOU MUST ACCEPT AT LEAST ONE SUBSCRIPTION TO SIGN UP</p>";
+            } else {
+                if(preg_match($emailRegex, $email)) {
+                    $sql = "SELECT * 
                         FROM email_tbl
-                        WHERE email = '$email';";      
-                //Check email
-                $rowResult = mysqli_query($conn, $sql);
-                if(mysqli_num_rows($rowResult)<=0) {
-                    $sql = "INSERT INTO email_tbl
+                        WHERE email = '$email';";
+                    //Check email
+                    $rowResult = mysqli_query($conn, $sql);
+                    if(mysqli_num_rows($rowResult)<=0) {
+                        $sql = "INSERT INTO email_tbl
                             (email, name,
                             news, blast)
                             VALUES('$email',
@@ -58,19 +61,21 @@
                             '$newsEmails'
                             );";
 
-                    if(!mysqli_query($conn, $sql)) {
-                        echo "<h1>Insert statement error</h1>";
-                        exit();
+                        if(!mysqli_query($conn, $sql)) {
+                            echo "<h1>Insert statement error</h1>";
+                            exit();
+                        }
+                        echo "<h1>Account created succesfully</h1>";
                     }
-                    echo "<h1>Account created succesfully</h1>";
+                    else {
+                        echo "<h1>Email already exists</h1>";
+                    }
                 }
                 else {
-                    echo "<h1>Email already exists</h1>";
-                    }
+                    echo "<h1>Invalid Email</h1>";
+                }
             }
-            else {
-                echo "<h1>Invalid Email</h1>";
-               }
+
         }
 	?>
 </html>

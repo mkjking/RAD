@@ -49,11 +49,11 @@
             $barWidth = 25;
 
             // Font settings
-            $font = realpath('fonts/BN-Regular.ttf');
+            $font = realpath('fonts/Righteous-Regular.ttf');
             $fontSize = 14;
             
             //Max value on y-axis
-            $yMaxValue = 20;
+            $yMaxValue = 50;
 
             //Label margins
             $labelMargin = 8;
