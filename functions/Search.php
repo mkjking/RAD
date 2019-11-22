@@ -32,7 +32,8 @@
             <input type="submit" name="btnSearch" value="Search" />
     </form>
 
-    <?php
+    <?php        
+
         //Perform a check for search button click 
         if (isset($_POST['btnSearch'])){
             //Retreive all data from inputs and place into an array
@@ -109,7 +110,7 @@
             $result = mysqli_query($conn, $sql);
 
             //Check for results and iterate through them
-            if(Mysqli_num_rows($result) != 0){
+            if(Mysqli_num_rows($result) != 0) {
                 
 
                 //Create table
@@ -125,11 +126,13 @@
                 . "<th> &nbsp Year &nbsp</th>"
                 . "<th> &nbsp Genre &nbsp</th>"
                 . "<th> &nbsp Aspect &nbsp</th>"
-                . "<th> &nbsp Search Count </th>";
+                . "<th> &nbsp Search Count </th>"
+                . "<th> &nbsp Likes </th>"
+                . "<th> &nbsp Rate </th>";
 
                 //Display table data
                 while ($row = mysqli_fetch_array($result)) {
-                    echo "<tr><td> &nbsp" . $row['ID'] . "&nbsp </td>"
+                    echo "<tr><td class='id'> &nbsp" . $row['ID'] . "&nbsp </td>"
                     . "<td> &nbsp" . $row['title'] . "&nbsp </td>"
                     . "<td> &nbsp" . $row['studio'] . "&nbsp </td>" 
                     . "<td> &nbsp" . $row['status'] . "&nbsp </td>" 
@@ -140,7 +143,10 @@
                     . "<td> &nbsp" . $row['year'] . "&nbsp </td>"
                     . "<td> &nbsp" . $row['genre'] . "&nbsp </td>" 
                     . "<td> &nbsp" . $row['aspect'] . "&nbsp </td>"
-                    . "<td> &nbsp" . $row['searchNo'] . "</td></tr>";
+                    . "<td> &nbsp" . $row['searchNo'] . "</td>"
+                    . "<td> &nbsp" . $row['likes'] . "</td>"
+                    . "<td> <button type='button' class='addLike'>Like</button>
+                            <button type='button' class='removeLike'>Dislike</button> </td></tr>";
                 }
 
                 //Send table to browser
@@ -152,4 +158,17 @@
             }
         }  
     ?>
+    <!-- Grab liked/disliked ID send to php -->
+    <script>
+        $(".addLike").click(function() {
+            var $data = $(this).closest("tr");
+            var $id = parseInt($data.find(".id").text());
+            window.location.replace('MoviesSearch.php?Likeid='+$id);
+        });
+            $(".removeLike").click(function() {
+            var $data = $(this).closest("tr");
+            var $id = parseInt($data.find(".id").text());
+            window.location.replace('MoviesSearch.php?Dislikeid='+$id);
+        });
+    </script>      
 </html>

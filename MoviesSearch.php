@@ -11,6 +11,7 @@
     <head>
         <title>Movies: Search</title>
         <link rel="stylesheet" type="text/css" href="MovieDatabasecss.css"/>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     </head>
 
     <body>
@@ -24,7 +25,24 @@
             <div class="content">
                 <?php
                     require'functions/Search.php';
-                ?>
+                    //Likes and dislikes from JS
+                    $id = $_GET['Likeid'];
+                    if($id) {
+                        $sql = "UPDATE movies_tbl SET
+                                likes = likes + 1
+                                WHERE ID = ".$id.";";
+                        mysqli_query($conn, $sql);
+                        echo mysqli_error($conn);
+                    }
+                                
+                    $id = $_GET['Dislikeid'];
+                    if($id) {
+                        $sql = "UPDATE movies_tbl SET
+                                likes = likes - 1
+                                WHERE ID = ".$id.";";
+                        mysqli_query($conn, $sql);
+                    }                    
+                ?>                
             </div>
         </div>
         

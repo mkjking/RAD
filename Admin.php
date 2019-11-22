@@ -34,7 +34,7 @@
                 <?php 
                     require('functions/AdminLogin.php');
                     //CHECK FOR LOGIN
-                    if($loginStatus === true) {
+                    if($loginStatus) {
                         //PASSWORD AND REMOVE FORMS
                         echo' <form action="AdminControl.php" method="post">
                                   <label>Change Admin Password: </label><input type="text" name="adminPassword"><br>

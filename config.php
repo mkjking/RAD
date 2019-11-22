@@ -11,8 +11,8 @@
 	<?php
 		
 		//Variables for connection
-		$host = "localhost";			
-		$user = "root";
+		$host = "";			
+		$user = "";
 		$password = "";
 		$database= "rentalmovies_db";
 		$port = 3306;

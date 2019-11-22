@@ -9,4 +9,5 @@ vscode/*
 config.php
 #Ignore idea folder
 .idea
-
+#temp doc
+~$sterDoc.*

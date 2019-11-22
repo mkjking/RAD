@@ -11,6 +11,7 @@
     <head>
         <title>Movies: List</title>
         <link rel="stylesheet" type="text/css" href="MovieDatabasecss.css"/>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     </head>
 
     <body>
@@ -26,13 +27,29 @@
 
                 <?php 
                     require 'functions/Connection.php';
-                    //require 'functions/moviesDB.php';
+
+                    //Likes and dislikes from JS
+                    $id = $_GET['Likeid'];
+                    if($id) {
+                        $sql = "UPDATE movies_tbl SET
+                                likes = likes + 1
+                                WHERE ID = ".$id.";";
+                        mysqli_query($conn, $sql);
+                    }
                     
+                    $id = $_GET['Dislikeid'];
+                    if($id) {
+                        $sql = "UPDATE movies_tbl SET
+                                likes = likes - 1
+                                WHERE ID = ".$id.";";
+                        mysqli_query($conn, $sql);                       
+                    }
+
                     $sql = "SELECT * FROM movies_tbl";
 
                     //Make query and get result
                     $result = mysqli_query($conn, $sql);
-                    if($result === false) {
+                    if(!$result) {
                         echo"<p>No data in table</p>";
                         exit();
                     }
@@ -49,11 +66,13 @@
                     . "<th> &nbsp Year &nbsp</th>"
                     . "<th> &nbsp Genre &nbsp</th>"
                     . "<th> &nbsp Aspect &nbsp</th>"
-                    . "<th> &nbsp Search Count </th>";
+                    . "<th> &nbsp Search Count </th>"
+                    . "<th> &nbsp Likes </th>"
+                    . "<th> &nbsp Rate </th>";
                                         
                     //Display table data
                     while ($row = mysqli_fetch_array($result)) {
-                        echo "<tr><td> &nbsp" . $row['ID'] . "&nbsp </td>"
+                        echo "<tr><td class='id'> &nbsp" . $row['ID'] . "&nbsp </td>"
                         . "<td> &nbsp" . $row['title'] . "&nbsp </td>"
                         . "<td> &nbsp" . $row['studio'] . "&nbsp </td>" 
                         . "<td> &nbsp" . $row['status'] . "&nbsp </td>" 
@@ -64,13 +83,30 @@
                         . "<td> &nbsp" . $row['year'] . "&nbsp </td>"
                         . "<td> &nbsp" . $row['genre'] . "&nbsp </td>" 
                         . "<td> &nbsp" . $row['aspect'] . "&nbsp </td>"
-                        . "<td> &nbsp" . $row['searchNo'] . "</td></tr>";
+                        . "<td> &nbsp" . $row['searchNo'] . "</td>"
+                        . "<td> &nbsp" . $row['likes'] . "</td>"
+                        . "<td> <button type='button' class='addLike'>Like</button>
+                            <button type='button' class='removeLike'>Dislike</button> </td></tr>";
                     }
                     
                     //Send Table to Browser
                     echo "</table>";
+                    echo "";
                 ?>
 
+                <!-- Grab liked/disliked ID send to php -->
+                <script>
+                    $(".addLike").click(function() {
+                        var $data = $(this).closest("tr");
+                        var $id = parseInt($data.find(".id").text());
+                        window.location.replace('MovieList.php?Likeid='+$id);
+                    });
+                    $(".removeLike").click(function() {
+                        var $data = $(this).closest("tr");
+                        var $id = parseInt($data.find(".id").text());
+                        window.location.replace('MovieList.php?Dislikeid='+$id);
+                    });
+                </script>               
             </div>
         </div>
         

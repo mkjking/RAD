@@ -82,7 +82,8 @@
                             year VARCHAR(4),
                             genre VARCHAR(50),
                             aspect VARCHAR(6),
-                            searchNo INTEGER(6)
+                            searchNo INTEGER(6),
+                            likes INTEGER(10)
                             )";
 
                         //Run Query
