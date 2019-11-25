@@ -134,9 +134,9 @@
             imageline($image, $gridLeft, $gridBottom, $gridRight, $gridBottom, $axisColour);
 
             //Post to browser
-            imagepng($image, "image.png");
+            imagepng($image, "Searches.png");
             imagedestroy($image);
-            echo "<img src='image.png'><p></p>";
+            echo "<img src='Searches.png'><p></p>";
         }
         else {
             echo "<h1>No Movies Found</h1>";

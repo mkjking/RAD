@@ -1,5 +1,7 @@
-# Ignore image.png
+# Ignore images
 image.png
+Searches.png
+Ratings.png
 #Ignore vscode folder
 vscode/*
 .vscode/launch.json
