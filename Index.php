@@ -42,6 +42,11 @@
                 ?>
             </div>
             <div class="content">
+                <?php
+                    require'functions/Top10Rated.php';
+                ?>
+            </div>
+            <div class="content">
                 <!--Signup page link-->
                 <p >Want to receive newsletters and other information about movies? Click below to signup for our Newsletter program!</p>
                 <a href="Signup.php"><h1>SIGNUP!</h1></a>
