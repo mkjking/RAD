@@ -4,14 +4,13 @@
         To safely represent the content of this file please contain it in a DIV
         A connection to the database must be made prior to referencing this!
 
-        AAuthor: Blayde Dietsch, Mitchel King, Noah Jackson
+        Author: Blayde Dietsch, Mitchel King, Noah Jackson
         Date: 25/11/2019
     -->
 
     <h1>Top 10 Rated Movies</h1>
 
     <?php 
-        
         //Get Movie Data
         $sql = "SELECT ID, title, likes  
                 FROM movies_tbl
@@ -22,7 +21,7 @@
         $result = mysqli_query($conn, $sql);
 
         //Make sure result isnt false
-        if($result === false) {
+        if(!$result) {
             echo "<p>No data in table</p>";
             exit();
         }

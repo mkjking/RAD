@@ -43,7 +43,10 @@
             </div>
             <div class="content">
                 <?php
-                    require'functions/Top10Rated.php';
+                require 'functions/StoreTop10.php';
+                if($create) {
+                    include'functions/Top10Rated.php';
+                }
                 ?>
             </div>
             <div class="content">
