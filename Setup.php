@@ -154,6 +154,35 @@
                     $sql = "DELETE FROM email_tbl";
                     //Attempt query
                     mysqli_query($conn, $sql) or die("Failed Email Table Purge");
+                    
+                    //=============== RATINGS TABLE CREATION ===============//
+                    
+                    //CREATE
+
+                    //SQL for table Creation
+                    $sql = "CREATE TABLE `ratings_tbl` (
+                        `ts` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+                        `first` tinytext,
+                        `second` tinytext,
+                        `third` tinytext,
+                        `fourth` tinytext,
+                        `fifth` tinytext,
+                        `sixth` tinytext,
+                        `seventh` tinytext,
+                        `eighth` tinytext,
+                        `ninth` tinytext,
+                        `tenth` tinytext
+                      )";
+
+                    //Attempt query
+                    mysqli_query($conn, $sql) or die("Failed Ratings Table Creation");
+                    
+                    //PURGE
+
+                    //Purge table in case it exists
+                    $sql = "DELETE FROM ratings_tbl";
+                    //Attempt query
+                    mysqli_query($conn, $sql) or die("Failed ratings Table Purge");
 
                     //REFRESH BROWSER
                     header("Refresh:0");

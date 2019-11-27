@@ -10,7 +10,7 @@
 
 	<?php
 		$create = false;
-		require'Rating.php';
+		require 'Rating.php';
 		//Get Movie Data
 	    $sql = "SELECT ID, title, likes  
 	                FROM movies_tbl

@@ -48,6 +48,31 @@
                         //USER TABLE
                         echo "<h1>SUBSCRIBED USERS</h1>";
                         require 'functions/Usertable.php';
+                        echo "<h1>RATINGS HISTORY</h1>";
+
+                        //Historical ratings
+                     
+                        include 'config.php';
+
+                        $conn = mysqli_connect($host,$user,$password, $database);
+
+                        $resultSet = $conn->query("SELECT ts FROM ratings_tbl ORDER BY ts DESC") 
+
+                        ?>
+
+
+                        <form action="ratingsHistory.php" method="post">
+                            <select name="ratings">
+                                <?php
+                                    while($rows = $resultSet->fetch_assoc()){
+                                    $ratingDate = $rows['ts'];
+                                    echo "<option value='$ratingDate'>$ratingDate</option>";
+                                    }
+                                ?>
+                            </select>
+                            <p><input type="submit" name="btnGetGraph" value="Retreive Data"/></p>
+                        </form>
+                        <?php
                     }
                 ?>
             </div>
