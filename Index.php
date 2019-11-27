@@ -43,10 +43,13 @@
             </div>
             <div class="content">
                 <?php
-                require 'functions/StoreTop10.php';
-                if($create) {
-                    include'functions/Top10Rated.php';
-                }
+                    require 'functions/StoreTop10.php';
+                    if($create) {
+                        include'functions/Top10Rated.php';
+                        echo'<script>
+                                location.reload();
+                            </script>';
+                    }
                 ?>
             </div>
             <div class="content">
