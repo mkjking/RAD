@@ -33,7 +33,7 @@
             //=====Build Graph=====
             //Image size
             $imageWidth = 1500;
-            $imageHeight = 800;
+            $imageHeight = 900;
 
             //Grid within image
             $gridTop = 50;
