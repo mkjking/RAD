@@ -46,11 +46,10 @@
 
 	    //Get recent most data from ratings_tbl to compare
 	    $sql = "SELECT * FROM ratings_tbl
-	    		ORDER BY id DESC LIMIT 1";
+	    		ORDER BY ts DESC LIMIT 1";
 
 	   	if(!$result = mysqli_query($conn, $sql)){
 	        echo "<p>No data in table</p>";
-	        exit();
 	   	}
 
 	   	$prevRatings = array();
@@ -115,7 +114,7 @@
 	   		$Ratings[6]->id ==$prevRatings[6] && $Ratings[7]->id == $prevRatings[7] &&
 	   		$Ratings[8]->id == $prevRatings[8] && $Ratings[9]->id == $prevRatings[9]) {
 
-	   		// echo previous image as top 10 hasnt changed
+	   		// echo previous image as top 10 hasnt changed, image only generated if data changes
 	        echo "<img src='Ratings.png'><p></p>";
 	   	}
 	   	else {
