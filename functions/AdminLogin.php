@@ -10,6 +10,7 @@
 
 
     <form action="Admin.php" method="post">
+        <label>Email: </label><input type="text" name="adminEmail" placeholder=""><br>
         <label>Password: </label><input type="text" name="password" placeholder=""><br>
         <input type="submit" name="btnLogin" value="Login" />
     </form>
@@ -23,6 +24,7 @@
 
             //Retreive password from input
             $passwordEntered = $_POST["password"];
+            $emailEntered = $_POST["adminEmail"];
 
             $sql = "SELECT *
                     FROM admin_tbl";
@@ -32,12 +34,13 @@
             if ($row = mysqli_fetch_assoc($result))
             {
                 $adminPassword = $row['Password'];
+                $adminEmail = $row['Email'];
             }
             
-            if ($passwordEntered === $adminPassword){
+            if ($passwordEntered === $adminPassword && $adminEmail === $emailEntered){
                 $loginStatus=true;
             }else{
-                echo "<p style=\"font-size: 20px\"><span style=\"color: Red\"> Password Incorrect</span></p>";
+                echo "<p style=\"font-size: 20px\"><span style=\"color: Red\"> Details Incorrect</span></p>";
             }
         }
 	?>

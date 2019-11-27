@@ -43,6 +43,7 @@
             </div>
             <div class="content">
                 <?php
+                    //echo "<h1>Top 10 Rated Movies</h1>";
                     require 'functions/StoreTop10.php';
                     if($create) {
                         include'functions/Top10Rated.php';

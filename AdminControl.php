@@ -35,10 +35,11 @@
                     //CHANGE EMAIL/PASSWORD
                     if (isset($_POST['btnChange'])){
                         $newPassword = $_POST['adminPassword'];
+                        $checkEmail = $_POST['adminEmail'];
 
                         $sql = "UPDATE admin_tbl
                                 SET `Password`='$newPassword'
-                                WHERE Email='acmetestsmtafe@gmail.com'";
+                                WHERE Email='$checkEmail'";
 
                         if (mysqli_query($conn, $sql)){
                             echo "<p><span style=\"color: Lime\"> Password Changed!</span></p>";
@@ -46,6 +47,39 @@
                             echo "<p><span style=\"color: Red\"> Failed to change password!</span></p>";
                         }
                         echo "<p class='unsub'><a href='Admin.php'>Back to Admin Page</a></p>";
+                    }
+
+                    if(isset($_POST['btnCreate'])){
+                        $createEmail = $_POST['createEmail'];
+                        $createPassword = $_POST['createPassword'];
+
+                        //Password Regex
+                        $passwordComplexity = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})";
+
+                        if(preg_match($passwordComplexity, $createPassword)) {
+                            $sql = "SELECT * 
+                            FROM admin_tbl
+                            WHERE email = '$createEmail';";
+
+                            $rowResult = mysqli_query($conn, $sql);
+                            if(mysqli_num_rows($rowResult)<=0) {
+                                $sql = "INSERT INTO admin_tbl
+                                (email, password)
+                                VALUES('$createEmail', '$createPassword');";
+
+                                if(!mysqli_query($conn, $sql)) {
+                                    echo "<h1>Insert statement error</h1>";
+                                    exit();
+                                }
+                                echo "<h1>Account created succesfully</h1>";
+                            }
+                            else {
+                                echo "<h1>Account already exists</h1>";
+                            }
+                        }
+                        else {
+                            echo "<h1>Invalid Password</h1>";
+                        }
                     }
 
                     //REMOVE USER
