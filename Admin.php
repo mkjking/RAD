@@ -58,7 +58,7 @@
                 if ($loginStatus) {
                         //USER TABLE
                         echo "<h1>SUBSCRIBED USERS</h1>";
-                        incude 'functions/Usertable.php';
+                        include 'functions/Usertable.php';
                         echo "<h1>RATINGS HISTORY</h1>";
                     
                         //Historical ratings
