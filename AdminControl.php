@@ -54,17 +54,17 @@
                         $createPassword = $_POST['createPassword'];
 
                         //Password Regex
-                        $passwordComplexity = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})";
+                        $passwordComplexity = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/";
 
                         if(preg_match($passwordComplexity, $createPassword)) {
                             $sql = "SELECT * 
                             FROM admin_tbl
-                            WHERE email = '$createEmail';";
+                            WHERE Email = '$createEmail';";
 
                             $rowResult = mysqli_query($conn, $sql);
                             if(mysqli_num_rows($rowResult)<=0) {
                                 $sql = "INSERT INTO admin_tbl
-                                (email, password)
+                                (Email, Password)
                                 VALUES('$createEmail', '$createPassword');";
 
                                 if(!mysqli_query($conn, $sql)) {

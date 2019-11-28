@@ -63,7 +63,7 @@
                                   <input type="submit" name="btnChange" value="Change"/>
                               </form>
                               <h1>CREATE NEW ADMIN ACCOUNT</h1>
-                              <form>
+                              <form action ="AdminControl.php" method="post">
                                   <label>Enter Your Email: </label><input type="text" name="createEmail"><br>
                                   <label>Choose the Password: </label><input type="text" name="createPassword"><br>
                                   <p style="font-size=6px">Password must be 8 characters or longer and have <br> one lower case, one upper case, and one number</p>
