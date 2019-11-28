@@ -11,31 +11,58 @@
     <!-- Text to establish that this is the search menu -->
     <h1>Search Menu:</h1>
 
-    <?php 
-        //Establish a PHP to SQL connection via the "Connection.php" file
+    <?php
+    /**
+    PHP version 7
+
+    @category SQL
+
+    @package RAD
+
+    @author Original Author <mitchel_king@icloud.com>
+
+    @license http://www.php.net/license PHP license 7
+
+    @link http:/pear.php.net
+
+    @file Connection.php
+
+    Establish a PHP to SQL connection via the "Connection.php" file
+     **/
         require 'Connection.php';
     ?>
 
     <!-- Create all the input boxes that may be needed and placeholders -->
     <form action="MoviesSearch.php" method="post">
-        <label>MovieID: </label><input type="text" name="movieID" placeholder="248"><br>
-            <label>Title: </label><input type="text" name="title" placeholder="Dead Bang"><br>
-            <label>Studio: </label><input type="text" name="studio" placeholder="Warner Brothers"><br>
-            <label>Status: </label><input type="text" name="status" placeholder="Out"><br>
-            <label>Sound: </label><input type="text" name="sound" placeholder="SUR"><br>
-            <label>Versions: </label><input type="text" name="versions" placeholder="4:3"><br>
-            <label>Price: </label><input type="text" name="recRetPrice" placeholder="9.99"><br>
-            <label>Rating: </label><input type="text" name="rating" placeholder="R"><br>
-            <label>Year: </label><input type="text" name="year" placeholder="1989"><br>
-            <label>Genre: </label><input type="text" name="genre" placeholder="Action/Adventure"><br>
-            <label>Aspect: </label><input type="text" name="aspect" placeholder="1.33:1"><br>
+        <label>MovieID: </label><input type="text"
+         name="movieID" placeholder="248"><br>
+            <label>Title: </label><input type="text"
+             name="title" placeholder="Dead Bang"><br>
+            <label>Studio: </label><input type="text"
+             name="studio" placeholder="Warner Brothers"><br>
+            <label>Status: </label><input type="text"
+             name="status" placeholder="Out"><br>
+            <label>Sound: </label><input type="text"
+             name="sound" placeholder="SUR"><br>
+            <label>Versions: </label><input type="text"
+             name="versions" placeholder="4:3"><br>
+            <label>Price: </label><input type="text"
+             name="recRetPrice" placeholder="9.99"><br>
+            <label>Rating: </label><input type="text"
+             name="rating" placeholder="R"><br>
+            <label>Year: </label><input type="text"
+             name="year" placeholder="1989"><br>
+            <label>Genre: </label><input type="text"
+             name="genre" placeholder="Action/Adventure"><br>
+            <label>Aspect: </label><input type="text"
+             name="aspect" placeholder="1.33:1"><br>
             <input type="submit" name="btnSearch" value="Search" />
     </form>
 
     <?php        
 
         //Perform a check for search button click 
-        if (isset($_POST['btnSearch'])){
+    if (isset($_POST['btnSearch'])) {
             //Retreive all data from inputs and place into an array
             $searchData = [
                 "movieID" => $_POST["movieID"],
@@ -53,8 +80,8 @@
 
 
             //Validate Data
-            foreach($searchData as $key => $value) {
-                if (empty($value)){
+            foreach ($searchData as $key => $value) {
+                if (empty($value)) {
                     //If the Data is empty give it a wildcard value
                     $searchData[$key] = "%";
                 }
@@ -110,7 +137,7 @@
             $result = mysqli_query($conn, $sql);
 
             //Check for results and iterate through them
-            if(Mysqli_num_rows($result) != 0) {
+            if (Mysqli_num_rows($result) != 0) {
                 
 
                 //Create table
@@ -146,17 +173,17 @@
                     . "<td> &nbsp" . $row['searchNo'] . "</td>"
                     . "<td> &nbsp" . $row['likes'] . "</td>"
                     . "<td> <button type='button' class='addLike'>Like</button>
-                            <button type='button' class='removeLike'>Dislike</button> </td></tr>";
+                            <button type='button' class=
+                            'removeLike'>Dislike</button> </td></tr>";
                 }
 
                 //Send table to browser
                 echo "</table>";
-            }
-            else {
+            } else {
                 //Report that no movies could be found
                 echo "<h1>No Movies Found</h1>";
             }
-        }  
+    }  
     ?>
     <!-- Grab liked/disliked ID send to php -->
     <script>
