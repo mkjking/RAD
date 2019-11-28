@@ -39,7 +39,22 @@
                         echo "<h1>SUBSCRIBED USERS</h1>";
                         require 'functions/Usertable.php';
                         echo "<h1>RATINGS HISTORY</h1>";
-
+                    
+                        //Historical ratings
+                        include 'config.php';
+                        $conn = mysqli_connect($host,$user,$password, $database);
+                        $resultSet = $conn->query("SELECT ts FROM ratings_tbl ORDER BY ts DESC");                       
+                        
+                        echo'<form action="ratingsHistory.php" method="post">
+                            <select name="ratings">';
+                                while($rows = $resultSet->fetch_assoc()){
+                                $ratingDate = $rows["ts"];
+                                echo "<option value='$ratingDate'>$ratingDate</option>";
+                                }
+                        echo'    </select>
+                            <p><input type="submit" name="btnGetGraph" value="Retreive Data"/></p>
+                        </form>';
+                
                         //PASSWORD AND REMOVE FORMS
                         echo' <h1>CHANGE PASSWORD</h1>
                               <form action="AdminControl.php" method="post">
@@ -58,32 +73,8 @@
                               <form action="AdminControl.php" method="post">
                                    <label>User Email to Remove: </label><input type="text" name="userEmail"><br>
                                   <input type="submit" name="btnRemove" value="Remove"/>
-                              </form>';
-
-                        //Historical ratings
-                     
-                        include 'config.php';
-
-                        $conn = mysqli_connect($host,$user,$password, $database);
-
-                        $resultSet = $conn->query("SELECT ts FROM ratings_tbl ORDER BY ts DESC") 
-
-                        ?>
-
-
-                        <form action="ratingsHistory.php" method="post">
-                            <select name="ratings">
-                                <?php
-                                    while($rows = $resultSet->fetch_assoc()){
-                                    $ratingDate = $rows['ts'];
-                                    echo "<option value='$ratingDate'>$ratingDate</option>";
-                                    }
-                                ?>
-                            </select>
-                            <p><input type="submit" name="btnGetGraph" value="Retreive Data"/></p>
-                        </form>
-                        <?php
-                    }
+                             </form>';
+                    }                
                 ?>
             </div>
         </div>

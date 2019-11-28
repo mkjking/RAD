@@ -12,6 +12,7 @@
         <title>Movies: Admin</title>
         <link rel="stylesheet" type="text/css" href="MovieDatabasecss.css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     </head>
 
     <body>
@@ -32,29 +33,25 @@
 
             <div class="content">
 
+<!----------------- Uncomment to bring back date selector, which logs admin out ---------------------->
                 <?php
-                    include 'config.php';
-
-                    $conn = mysqli_connect($host,$user,$password, $database);
-
-                    $resultSet = $conn->query("SELECT ts FROM ratings_tbl ORDER BY ts DESC") 
+                    // include 'config.php';
+                    // $conn = mysqli_connect($host,$user,$password, $database);
+                    // $resultSet = $conn->query("SELECT ts FROM ratings_tbl ORDER BY ts DESC");
                 ?>
 
-
-                <form action="ratingsHistory.php" method="post">
+<!--                 <form action="ratingsHistory.php" method="post">
                     <select name="ratings">
                         <?php
-                            while($rows = $resultSet->fetch_assoc()){
-                            $ratingDate = $rows['ts'];
-                            echo "<option value='$ratingDate'>$ratingDate</option>";
-                            }
+                            // while($rows = $resultSet->fetch_assoc()){
+                            // $ratingDate = $rows['ts'];
+                            // echo "<option value='$ratingDate'>$ratingDate</option>";
+                            // }
                         ?>
                     </select>
-                    <p><input type="submit" name="btnGetGraph" value="Retreive Data"/></p>
-                </form>
-
-
-
+                    <p><input class="retrieveBtn" type="submit" name="btnGetGraph" value="Retreive Data"/></p>
+                </form> -->
+<!------------------------------------------------------------------------------------------------------>
                 <?php
                     //Perform a check for button click 
                     if (isset($_POST['btnGetGraph'])){
@@ -234,7 +231,14 @@
                             echo "<h1>$date</h1>";
                             echo "<img src='RatingsHistorical.png'><p></p>";
 
-                            echo "<p class='unsub'><a href='Admin.php'>Back to Admin Page</a></p>";
+                            //Uncomment this line and comment out javsscript if using date selector
+                            // echo "<p class='unsub'><a href='Admin.php'>Back to Admin Page</a></p>";
+                            echo'<button type="button" class="goBack">Back to Admin</button>
+                                <script>
+                                    $(".goBack").click(function(){
+                                         window.history.back();
+                                        });
+                                </script>';
                    }   
                 ?>
                 
