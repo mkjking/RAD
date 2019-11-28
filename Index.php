@@ -18,6 +18,26 @@
     <body>
         <header>
             <?php
+            /**
+            PHP version 7
+
+            @category SQL
+
+            @package RAD
+
+            @author Original Author <mitchel_king@icloud.com>
+
+            @license http://www.php.net/license PHP license 7
+
+            @link http:/pear.php.net
+             **/
+            /** 
+            Nav file
+            
+            @file nav.php
+
+            renders the navigation bar
+             **/
                 require_once'functions/nav.php'; 
             ?>
         </header>
@@ -43,19 +63,19 @@
             </div>
             <div class="content">
                 <?php
-                    //echo "<h1>Top 10 Rated Movies</h1>";
-                    require 'functions/StoreTop10.php';
-                    if($create) {
-                        include'functions/Top10Rated.php';
-                        echo'<script>
-                                location.reload();
-                            </script>';
-                    }
+                require 'functions/StoreTop10.php';
+                if ($create) {
+                    include'functions/Top10Rated.php';
+                    echo'<script>
+                            location.reload();
+                        </script>';
+                }
                 ?>
             </div>
             <div class="content">
                 <!--Signup page link-->
-                <p >Want to receive newsletters and other information about movies? Click below to signup for our Newsletter program!</p>
+                <p >Want to receive newsletters and other information about movies?
+                 Click below to signup for our Newsletter program!</p>
                 <a href="Signup.php"><h1>SIGNUP!</h1></a>
             </div>
         </div>
