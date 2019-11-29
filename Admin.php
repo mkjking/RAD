@@ -53,6 +53,7 @@
             </div>
             <div class="content">
                 <?php 
+                require 'functions/StoreTop10.php';
                 require'functions/AdminLogin.php';
                     //CHECK FOR LOGIN
                 if ($loginStatus) {
