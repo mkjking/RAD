@@ -55,19 +55,28 @@
                         $newPassword = $_POST['adminPassword'];
                         $checkEmail = $_POST['adminEmail'];
 
+                        $passwordComplexity
+                        = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/";
+
+                    if (preg_match($passwordComplexity, $newPassword)) {
+
                         $sql = "UPDATE admin_tbl
                                 SET `Password`='$newPassword'
                                 WHERE Email='$checkEmail'";
 
-                    if (mysqli_query($conn, $sql)) {
-                            echo "<p><span style=\"color: Lime\">
-                             Password Changed!</span></p>";
-                    } else {
-                            echo "<p><span style=\"color: Red\">
-                             Failed to change password!</span></p>";
+                        if (mysqli_query($conn, $sql)) {
+                                echo "<p><span style=\"color: Lime\">
+                                Password Changed!</span></p>";
+                        } else {
+                                echo "<p><span style=\"color: Red\">
+                                Failed to change password!</span></p>";
+                        }
+                    }else{
+                        echo "<h1>Invalid Password</h1>";
                     }
-                        echo "<p class='unsub'><a href='Admin.php'>
+                    echo "<p class='unsub'><a href='Admin.php'>
                         Back to Admin Page</a></p>";
+                        
                 }
 
                 if (isset($_POST['btnCreate'])) {
