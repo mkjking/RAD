@@ -57,14 +57,37 @@
                 <?php 
                 require 'functions/StoreTop10.php';
                 require 'functions/AdminLogin.php';
-                
+
                 //check session
                 if(isset($_POST['btnLogOut'])) {
                   session_unset();
                 }
+
+                if(isset($_POST['btnExtend'])) {
+                  $_SESSION["time"] = (double)($_SESSION["time"]+300);
+                }
+
                 //check session vars
                 if($_SESSION["user"] != '' && $_SESSION["pass"] != '') {
-                  $loginStatus = true;
+                  $currentTime = (double)date("his");
+                  $logTime = (double)$_SESSION["time"];
+
+                  //logout
+                  if($currentTime < $logTime+300) {
+                    $remaining = ($logTime +300) - $currentTime;
+                    echo'
+                    <div>
+                      <h2>
+                            Remaining session time: ' . $remaining . ' seconds
+                            <form action="Admin.php" method="post">
+                              <input title="Extend" type="submit" name="btnExtend" value="Extend"/>
+                            </form>
+                      <h2>
+                    </div>';
+                    $loginStatus = true;
+                  }
+                  else
+                    session_unset();
                 }
 
                 if($loginStatus) {

@@ -45,9 +45,9 @@
             && $adminEmail === $emailEntered
         ) {
             $loginStatus=true;
-            session_start();
             $_SESSION["user"] = $emailEntered;
             $_SESSION["pass"] = $passwordEntered;
+            $_SESSION["time"] = date("his");
         } else {
             $loginStatus = false;
             echo "<p style=\"font-size: 20px\"><span style=\"

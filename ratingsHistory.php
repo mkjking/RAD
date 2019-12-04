@@ -234,12 +234,6 @@
 
                             //Uncomment this line and comment out javsscript if using date selector
                             echo "<p class='unsub'><a href='Admin.php'>Back to Admin Page</a></p>";
-                            // echo'<button title="Back to Admin" type="button" class="goBack">Back to Admin</button>
-                            //     <script>
-                            //         $(".goBack").click(function(){
-                            //              window.history.back();
-                            //             });
-                            //     </script>';
                    }   
                 ?>
                 
