@@ -32,7 +32,7 @@
                   Connection Status: <span style=\"color: Red\"> Offline</span></p>";
     } else {
             echo "<p style=\"font-size: auto\">
-            Connection Status: <span style=\"color: Lime\"> Online</span></p>";
+            Connection Status: <span style=\"color: #5AB9EA\"> Online</span></p>";
 
             $databaseconn = mysqli_query($conn, "USE $database");
 
@@ -42,7 +42,7 @@
                 Database Status: <span style=\"color: Red\"> Offline</span></p>";
         } else {
                 echo "<p style=\"font-size: auto\">
-                Database Status: <span style=\"color: Lime\"> Online</span></p>";
+                Database Status: <span style=\"color: #5AB9EA\"> Online</span></p>";
         }
     }
     ?>

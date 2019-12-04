@@ -11,6 +11,7 @@
     <head>
         <title>Movies: List</title>
         <link rel="stylesheet" type="text/css" href="MovieDatabasecss.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     </head>
 
@@ -85,8 +86,8 @@
                         . "<td> &nbsp" . $row['aspect'] . "&nbsp </td>"
                         . "<td> &nbsp" . $row['searchNo'] . "</td>"
                         . "<td> &nbsp" . $row['likes'] . "</td>"
-                        . "<td> <button type='button' class='addLike'>Like</button>
-                            <button type='button' class='removeLike'>Dislike</button> </td></tr>";
+                        . "<td> <button type='button' class='addLike'><i class='fa fa-thumbs-up'></i>Like</button>
+                            <button type='button' class='removeLike'><i class='fa fa-thumbs-down'></i>Dislike</button> </td></tr>";
                     }
                     
                     //Send Table to Browser

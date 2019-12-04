@@ -11,7 +11,7 @@
     <h1>Top 10 Searched Movies</h1>
 
     <?php 
-        
+
         //Get Movie Data
         $sql = "SELECT ID, title, searchNo  
                 FROM movies_tbl
@@ -69,7 +69,7 @@
             $axisColour = imagecolorallocate($image, 255, 255, 255);
             $labelColour = $axisColour;
             $gridColour = imagecolorallocate($image, 125, 125, 125);
-            $barColour = imagecolorallocate($image, 0, 255, 0);
+            $barColour = imagecolorallocate($image, 125, 0, 255);
 
             //Fill background
             imagefill($image, 0, 0, $backgroundColour);
@@ -111,7 +111,7 @@
                 $y1 = $gridBottom - (int)$row['searchNo'] / $yMaxValue * $gridHeight;
                 $x2 = $itemX + $barWidth / 2;
                 $y2 = $gridBottom;
-                imagefilledrectangle($image, $x1, $y1, $x2, $y2, $barColour);
+                imagefilledrectangle($image,$x1,$y1,$x2,$y2,$barColour);
 
                 //Draw the label
                 $labelBox = imagettfbbox($fontSize, 0, $font, $row['title']);

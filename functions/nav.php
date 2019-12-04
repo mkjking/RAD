@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
+<html>
 
     <!-- 
         This php file is to handle expressing NAVigation.
@@ -11,7 +12,13 @@
     <div class="headerContainer">
         
         <div class="title">
-            <h1>Movie Rentals</h1>
+            <h1 id="h1title">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Movie Rentals
+            </h1>
         </div>
                 
         <nav>

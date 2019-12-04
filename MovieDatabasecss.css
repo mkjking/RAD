@@ -7,15 +7,56 @@
 
 /*========================================= MAJOR CSS =========================================*/
 
+/*============== Body ==============*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body {
     margin: 0;
-    background-color: rgb(65, 65, 65);
+    background-color: #282828;
+    background-image: linear-gradient(70deg, #8860D0, #5680E9, #84CEEB, #5AB9EA);
 }
+
+/*============== Content containers ==============*/
+
+.container {
+    /*border: 3px solid black;*/
+    background-color: #282828;
+    opacity: 80%;
+    box-shadow: 1px 0 2px black, 0 1px 2px black;
+    margin: auto;
+    width: 90%;
+    height: auto;
+
+    margin-top: 130px;
+     
+    position: relative;
+}
+
+.content {
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: auto;
+    opacity: 100%;
+}
+
+img {
+    border: 3px solid white;
+    width: 70%;
+}
+
+/*============== Header/Nav ==============*/
+
 
 header {
     top: 0;
     width: 100%;
-    height: 100px;
+    height: auto;
 
     background-color: rgb(19, 19, 19);
 
@@ -25,121 +66,134 @@ header {
     z-index: 9999;
 }
 
+.headerContainer {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.headerContainer::after{
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-image: linear-gradient(to right, #8860D0, #5680E9, #84CEEB, #5AB9EA);
+    margin-bottom: 10px;
+    border-radius: 3px;
+    position: relative;
+}
+
+.title {
+
+    float: left;
+    border: 3px solid white;
+    color: white;
+
+    padding: 5px;
+    margin: 5px;
+    margin-bottom: 10px;
+
+    overflow: hidden;
+}
+
+#h1title{
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 15px 25px;
+    font-size: 30px;
+
+    overflow: hidden;
+}
+
+#h1title span:nth-child(1){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, rgb(19, 19, 19), rgb(19, 19, 19), #8860D0, #5680E9, #84CEEB, #5AB9EA);
+
+    animation: animate1 2s linear infinite;
+    animation-delay: -3s;
+}
+@keyframes animate1{
+    0%{
+        transform: translatex(-100%);
+    }
+    100%{
+        transform: translatex(100%);
+    }
+}
+
+#h1title span:nth-child(2){
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, rgb(19, 19, 19), rgb(19, 19, 19), #8860D0, #5680E9, #84CEEB, #5AB9EA);
+
+    animation: animate2 2s linear infinite;
+    animation-delay: -2s;
+}
+@keyframes animate2{
+    0%{
+        transform: translatey(-100%);
+    }
+    100%{
+        transform: translatey(100%);
+    }
+}
+
+#h1title span:nth-child(3){
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to left, rgb(19, 19, 19), rgb(19, 19, 19), #8860D0, #5680E9, #84CEEB, #5AB9EA);
+
+    animation: animate3 2s linear infinite;
+    animation-delay: -1s;
+}
+@keyframes animate3{
+    0%{
+        transform: translatex(100%);
+    }
+    100%{
+        transform: translatex(-100%);
+    }
+}
+
+#h1title span:nth-child(4){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to top, rgb(19, 19, 19), rgb(19, 19, 19), #8860D0, #5680E9, #84CEEB, #5AB9EA);
+
+    animation: animate4 2s linear infinite;
+    animation-delay: 0s;
+}
+@keyframes animate4{
+    0%{
+        transform: translatey(100%);
+    }
+    100%{
+        transform: translatey(-100%);
+    }
+}
+
 footer {
-    border:  3px solid black;
+    opacity: 80%;
+    box-shadow: 1px 0 2px black, 0 1px 2px black;
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
     width: 90%;
     background-color: rgb(48, 48, 48);
-}
-
-.headerContainer {
-    width: 90%;
-    margin: 0 auto;
-}
-
-.title {
-    height: auto;
-    float: left;
-    border: 3px solid white;
-    color: white;
-    margin: 5px;
-    margin-top: 10px;
-    padding: 5px;
-}
-
-h1 {
-    font-family: Gruppo;
-    font-Size: 2.5em;
-    font-weight: bold;   
-    margin: 3px;
-    padding: 3px;
-
-    text-shadow: -1px 0 2px grey, 0 1px 2px grey, 1px 0 2px grey, 0 -1px 2px grey;
-
-    color: white;
-    text-decoration-line: underline;
-}
-
-p {
-    font-size: 20px;
-
-    font-family: Babus;
-    margin: 3px;
-
-    color: white;
-}
-
-p.unsub  {
-    font-size: 22px;
-    
-    font-family: Babus;
-    margin: 3px;
-    text-align: center;
-    text-shadow: -1px 0 2px grey, 0 1px 2px grey, 1px 0 2px grey, 0 -1px 2px grey;
-
-    text-decoration: none;
-
-    color: white;
-}
-
-p.provided {
-    font-size: 20px;
-    text-align: center;
-
-    font-family: Babus;
-    margin: 5px;
-
-    color: white;
-}
-
-p.note {
-    font-size: 16px;
-    text-align: center;
-
-    font-family: Gruppo;
-    margin: 5px;
-
-    color: red;
-}
-
-/*========================================= CONTROLS/BUTTONS/ANIMATIONS CSS =========================================*/
-
-input[type=button], input[type=submit], input[type=reset] {
-    background-color: #4CAF50;
-    color: white;
-    text-shadow: -1px 0 2px black, 0 1px 2px black, 1px 0 2px black, 0 -1px 2px black;
-    font-family: Gruppo;
-    font-size: 25px;
-    font-weight: bolder;
-    padding: 16px 32px;
-    text-decoration: none;
-    margin: 8px 4px;
-    cursor: pointer;
-
-    border: 3px solid black;
-    box-shadow: -1px 0 2px grey, 0 1px 2px grey, 1px 0 2px grey, 0 -1px 2px grey;
-
-    border-radius: 20px;
-}
-
-input[type=text] {
-    display: inline-block;
-}
-
-label {
-    font-size: 20px;
-
-    font-family: Babus;
-    margin-right: 2px;
-
-    color: white;
-    display: inline-block;
-
-    clear: left;
-    width: 100%;
-    text-align: center;
 }
 
 header ::after {
@@ -148,8 +202,22 @@ header ::after {
     clear: both;
 }
 
+header::after {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 0px;
+    border-radius: 0px;
+    position: relative;
+}
+
 nav {
     float: right;
+    margin-top: 15px;
+    
+    font-family: Athabasca;
 }
 
 nav ul {
@@ -162,7 +230,7 @@ nav li {
     
     /*border: 2px solid rgb(19, 19, 19);*/
     display: inline-block;
-    margin-left: 50px;
+    margin-left: 35px;
     margin-top: 26px;
     padding: 3px;
 
@@ -211,9 +279,185 @@ nav a:hover::before {
     border: 1px solid black;
 }
 
+/*============== Text containers ==============*/
+
+h1 {
+    font-family: Athabasca;
+    font-size: 36px;
+    font-weight: bold;   
+    margin: 3px;
+    padding: 3px;
+    opacity: 100%;
+
+    text-shadow: 1px 0 2px black, 0 1px 2px black;
+
+    color: white;
+    text-decoration-line: underline;
+}
+
+p {
+    opacity: 100%;
+    font-size: 20px;
+
+    font-family: Babus;
+    margin: 3px;
+
+    color: white;
+}
+
+p.unsub  {
+    font-size: 22px;
+    
+    font-family: Babus;
+    margin: 3px;
+    text-align: center;
+    text-shadow: -1px 0 2px grey, 0 1px 2px grey, 1px 0 2px grey, 0 -1px 2px grey;
+
+    text-decoration: none;
+
+    color: white;
+}
+
+p.provided {
+    font-size: 20px;
+    text-align: center;
+
+    font-family: Babus;
+    margin: 5px;
+
+    color: white;
+}
+
+p.note {
+    font-size: 16px;
+    text-align: center;
+
+    font-family: Gruppo;
+    margin: 5px;
+
+    color: red;
+}
+
+/*========================================= CONTROLS/BUTTONS/ANIMATIONS CSS =========================================*/
+
+input[type=button], input[type=submit], input[type=reset] {
+    position: relative;
+    background: white;
+    color: black;
+    font-family: Gruppo;
+    font-size: 25px;
+    font-weight: bolder;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 8px 4px;
+    cursor: pointer;
+
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 1px 0 2px black, 0 1px 2px black;
+}
+
+button.addLike{
+    color: white;
+    background: linear-gradient(70deg, #8860D0, #5680E9, #84CEEB, #5AB9EA);
+    text-shadow: 1px 0 2px black, 0 1px 2px black;
+    padding: 1px 2px;
+    margin: 1px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+button.removeLike{
+    color: white;
+    background: transparent;
+    padding: 1px 2px;
+    margin: 1px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+input[type=text] {
+    display: inline-block;
+}
+
+label {
+    font-size: 20px;
+
+    font-family: Babus;
+    margin-right: 2px;
+
+    color: white;
+    display: inline-block;
+
+    clear: left;
+    width: 100%;
+    text-align: center;
+}
+
+.menu{
+    margin: 0;
+    padding: 0;    
+    margin-bottom: 50px;
+    font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.item{
+   border-top: 1px solid #282828;
+   overflow: hidden; 
+}
+
+.btn{
+    display: block;
+    padding: 16px;
+    background: linear-gradient(70deg, #8860D0, #5680E9, #84CEEB, #5AB9EA);
+    color: white;
+    text-shadow: 1px 0 2px black, 0 1px 2px black;
+    position: relative;
+}
+
+.btn::before{
+    content:"";
+    position: absolute;
+    z-index: -1;
+    width: 14px;
+    height: 14px;
+    background: #8860D0;
+    left: 20px;
+    bottom: -7px;
+    transform: rotate(45deg);
+}
+
+.btn i{
+    margin-right: 10px;
+}
+
+.smenu{
+    background: #333;
+    overflow: hidden;
+    transition: max-height 0.3s;
+    max-height: 0;
+}
+
+.smenu a {
+    display: block;
+    padding: 16px 26px;
+    color: white;
+    margin: 4px, 0;
+    position: relative;
+}
+
+.item:target .smenu{
+    max-height: 500em;
+}
+
 /*========================================= OTHER CSS =========================================*/
 
 table {
+    opacity: 100%;
     font-family: Babus;
     font-size: large;
     padding: 1px;
@@ -221,31 +465,6 @@ table {
     border: 3px solid black;
     margin: auto;
     margin-bottom: 30px;
-}
-
-.container {
-    border: 3px solid black;
-    background-color: rgb(48, 48, 48);
-    margin: auto;
-    width: 90%;
-
-
-    margin-top: 120px;
-     
-    position: relative;
-}
-
-.content {
-    width: 90%;
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-img {
-    border: 3px solid white;
-    width: 70%;
 }
 
 /*========================================= FONTS =========================================*/
@@ -270,152 +489,17 @@ img {
     src: url(fonts/Geometos.ttf);
 }
 
-/*========================================= SCREENS =========================================*/
-
-/*================================================================== 1500 ==================================================================*/
-
-@media screen and (max-width: 1500px) {
-
-    /*=================== MAJOR CSS ==================*/
-
-    body {
-        margin: 0;
-    }
-
-    footer {
-        border:3px solid black;
-        margin: auto;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    .headerContainer {
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    .title {
-        margin-top: 20px;
-    }
-
-    h1 {
-        font-Size: 25px;
-        margin: 2px;
-    }
-
-    p {
-        font-size: 20px;
-        margin: 3px;
-    }
-
-    /*================= CONTROLS/BUTTONS/ANIMATIONS CSS ==================*/
-
-    input[type=button], input[type=submit], input[type=reset] {
-        background-color: #4CAF50;
-        font-family: Gruppo;
-        font-size: 25px;
-        padding: 16px 32px;
-        text-decoration: none;
-        margin: 8px 4px;
-        cursor: pointer;
-
-        border: 3px solid black;
-    }
-
-    header ::after {
-        content: '';
-        display: table;
-        clear: both;
-    }
-
-    nav {
-        float: right;
-    }
-
-    nav ul {
-        margin:  0;
-        padding: 0;
-        list-style: none;
-    }
-
-    nav li {
-        
-        border: 2px solid rgb(19, 19, 19);
-        display: inline-block;
-        margin-left: 30px;
-        margin-top: 26px;
-        padding: 3px;
-
-        position: relative;
-    }
-
-    nav a {
-        color: rgb(50, 50, 50);
-        text-decoration: none;
-        text-transform: uppercase;
-        text-shadow: -1px 0 2px white, 0 1px 2px white, 1px 0 2px white, 0 -1px 2px white;
-        font-weight: bolder;
-
-        font-size: 20px;
-
-        position: relative;
-        top: -2.5px;
-    }
-
-    nav a:hover {
-        color: black;
-    }
-
-    nav a::before {
-        content: '';
-        display: block;
-        height: 5px;
-        width: 0%;
-        background-color: transparent;
-
-        border: 1px solid transparent;
-        border-radius: 5px;
-
-        position: relative;
-        top: 35px;
-        left: -1px;
-
-        transition: all ease-in-out 250ms;
-    }
-
-    nav a:hover::before {
-
-        width: 100%;
-
-        background-color: white;
-        border: 1px solid black;
-    }
-
-    /*=================== OTHER CSS ==================*/
-
-    table {
-        font-size: 16px;
-    }
-
-    .container {
-        margin: auto;
-        margin-top: 120px;
-        width: 90%;
-    }
-
-    .content {
-        width: 90%;
-        text-align: center;
-        margin: 0 auto;
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
-
-    
-    img {
-        width: 700px;
-    }
+@font-face {
+    font-family: SIMPLIFICA;
+    src: url(fonts/SIMPLIFICA\ Typeface.ttf);
 }
+
+@font-face {
+    font-family: Athabasca;
+    src: url(fonts/athabasca.regular.ttf);
+}
+
+/*========================================= SCREENS =========================================*/
 
 /*================================================================== 1000 ==================================================================*/
 
@@ -428,14 +512,13 @@ img {
     }
 
     header {
-        height: 130px;
+        height: auto;
     }
 
     .headerContainer {
         width: 90%;
-        height: 130px;
         margin: 0 auto;
-        align-content: center;
+        height: auto;
     }
 
     .title {
@@ -443,13 +526,26 @@ img {
         margin-top: 10px;
         align-content: center;
         padding: 3px;
-        width: 140px;
+        width: 250px;
         float: none;
     }
+    
 
     h1 {
         font-Size: 20px;
         margin: 3px;
+    }
+
+    #h1title{
+        position: relative;
+        top: 0;
+        left: 0;
+        padding: 15px 25px;
+        font-size: 30px;
+
+        width: 195px;
+    
+        overflow: hidden;
     }
 
     p {
@@ -481,6 +577,7 @@ img {
         margin: auto;
         position: relative;
         width: 500px;
+        height: 55px;
         margin-top: 0px;
         margin-bottom: 5px;
         float: none;
@@ -532,7 +629,7 @@ img {
         border-radius: 5px;
 
         position: relative;
-        top: 35px;
+        top: 25px;
         left: -1px;
 
         transition: all ease-in-out 250ms;
@@ -569,7 +666,7 @@ img {
     .container {
         border: 3px solid black;
         margin: auto;
-        margin-top: 160px;
+        margin-top: 180px;
     }
 
     .content {
@@ -611,8 +708,13 @@ img {
         margin-top: 10px;
         align-content: center;
         padding: 3px;
-        width: 140px;
+        width: auto;
         float: none;
+    }
+
+    #h1title{
+        width: auto;
+        text-align: center;
     }
 
 
@@ -650,6 +752,7 @@ img {
         margin: auto;
         position: relative;
         width: auto;
+        height: auto;
         margin-top: 0px;
         margin-bottom: 5px;
         float: none;
@@ -738,7 +841,7 @@ img {
     .container {
         border: 3px solid black;
         margin: auto;
-        margin-top: 160px;
+        margin-top: 225px;
     }
 
     .content {

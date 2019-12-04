@@ -33,31 +33,57 @@
     ?>
 
     <!-- Create all the input boxes that may be needed and placeholders -->
-    <form action="MoviesSearch.php" method="post">
-        <label>MovieID: </label><input type="text"
-         name="movieID" placeholder="248"><br>
-            <label>Title: </label><input type="text"
-             name="title" placeholder="Dead Bang"><br>
-            <label>Studio: </label><input type="text"
-             name="studio" placeholder="Warner Brothers"><br>
-            <label>Status: </label><input type="text"
-             name="status" placeholder="Out"><br>
-            <label>Sound: </label><input type="text"
-             name="sound" placeholder="SUR"><br>
-            <label>Versions: </label><input type="text"
-             name="versions" placeholder="4:3"><br>
-            <label>Price: </label><input type="text"
-             name="recRetPrice" placeholder="9.99"><br>
-            <label>Rating: </label><input type="text"
-             name="rating" placeholder="R"><br>
-            <label>Year: </label><input type="text"
-             name="year" placeholder="1989"><br>
-            <label>Genre: </label><input type="text"
-             name="genre" placeholder="Action/Adventure"><br>
-            <label>Aspect: </label><input type="text"
-             name="aspect" placeholder="1.33:1"><br>
-            <input type="submit" name="btnSearch" value="Search" />
-    </form>
+    <div class="menu">
+        <li class="item" id="simple">
+            <a href="#simple" class="btn">Simple Search</a>
+            <div class="smenu">
+                <form action="MoviesSearch.php" method="post">
+                    <label>MovieID: </label><input type="text"
+                    name="movieID" placeholder="248"><br>
+                    <label>Title: </label><input type="text"
+                    name="title" placeholder="Dead Bang"><br>
+                    <label>Genre: </label><input type="text"
+                    name="genre" placeholder="Action/Adventure"><br>
+                    <input type="submit" name="btnSearch" value="Search" />
+                </form>
+            </div>
+        </li>
+        <li class="item" id="advanced">
+            <a href="#advanced" class="btn">Advanced Search</a>
+            <div class="smenu">
+                <form action="MoviesSearch.php" method="post">
+                    <label>MovieID: </label><input type="text"
+                        name="movieID" placeholder="248"><br>
+                        <label>Title: </label><input type="text"
+                        name="title" placeholder="Dead Bang"><br>
+                        <label>Studio: </label><input type="text"
+                        name="studio" placeholder="Warner Brothers"><br>
+                        <label>Status: </label><input type="text"
+                        name="status" placeholder="Out"><br>
+                        <label>Sound: </label><input type="text"
+                        name="sound" placeholder="SUR"><br>
+                        <label>Versions: </label><input type="text"
+                        name="versions" placeholder="4:3"><br>
+                        <label>Price: </label><input type="text"
+                        name="recRetPrice" placeholder="9.99"><br>
+                        <label>Rating: </label><input type="text"
+                        name="rating" placeholder="R"><br>
+                        <label>Year: </label><input type="text"
+                        name="year" placeholder="1989"><br>
+                        <label>Genre: </label><input type="text"
+                        name="genre" placeholder="Action/Adventure"><br>
+                        <label>Aspect: </label><input type="text"
+                        name="aspect" placeholder="1.33:1"><br>
+                        <input type="submit" name="btnSearch" value="Search" />
+                </form>
+            </div>
+        </li>
+        <li class="item" id="close">
+            <a href="#close" class="btn"></a>
+        </li>
+    </div>
+
+    
 
     <?php        
 
