@@ -52,15 +52,6 @@
                     <p><input id="retrieve" class="retrieveBtn" type="submit" name="btnGetGraph" value="Retreive Data" /></p>
                     <input type="hidden" id="count" name="custId" value="1">
                 </form>
-<!--                 <script>
-                    var $button = document.getElementById('retrieve');
-                    var $counter = document.getElementById('count');
-
-                    $button.addEventListener('click', function(){
-                        $counter.value = parseInt($counter.value) +1;
-                        console.log($counter.value)
-                    }, false);
-                </script> -->
 <!------------------------------------------------------------------------------------------------------>
                 <?php
                     //Perform a check for button click 
