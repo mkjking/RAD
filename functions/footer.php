@@ -9,7 +9,7 @@
     -->
 
     <div class="footerContainer">
-        <a title="Unsubscribe from newsletter" href="Unsubscribe.php"><p class="unsub">Unsubscribe from newsletter</p></a>
+        <a title="Unsubscribe from newsletter" href="Unsubscribe.php" tabindex="9999"><p class="unsub">Unsubscribe from newsletter</p></a>
         <p title="Program provided by: Blayde Dietsch, Noah Jackson and Mitchel King" class="provided"> &nbsp Program provided by: Blayde Dietsch, Noah Jackson and Mitchel King &nbsp</p>
     </div>
 

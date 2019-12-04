@@ -22,11 +22,11 @@ body {
 /*============== Content containers ==============*/
 
 .container {
-    /*border: 3px solid black;*/
     background-color: #282828;
     opacity: 80%;
     box-shadow: 1px 0 2px black, 0 1px 2px black;
     margin: auto;
+    padding: 1px;
     width: 90%;
     height: auto;
 
@@ -43,6 +43,15 @@ body {
     margin-bottom: 30px;
     height: auto;
     opacity: 100%;
+}
+
+.contentBordered{
+    text-align: center;
+    margin: 0 auto;
+    height: auto;
+    opacity: 90%;
+    background-color: black;
+    
 }
 
 img {
@@ -96,7 +105,16 @@ header {
     overflow: hidden;
 }
 
-#h1title{
+.signupcontainer{
+
+    padding: 5px;
+    margin: 5px;
+    margin-bottom: 10px;
+
+    overflow: hidden;
+}
+
+#h1title, .signup{
     position: relative;
     top: 0;
     left: 0;
@@ -106,7 +124,7 @@ header {
     overflow: hidden;
 }
 
-#h1title span:nth-child(1){
+#h1title span:nth-child(1),.signup span:nth-child(1){
     position: absolute;
     top: 0;
     left: 0;
@@ -126,7 +144,7 @@ header {
     }
 }
 
-#h1title span:nth-child(2){
+#h1title span:nth-child(2), .signup span:nth-child(2){
     position: absolute;
     top: 0;
     right: 0;
@@ -146,7 +164,7 @@ header {
     }
 }
 
-#h1title span:nth-child(3){
+#h1title span:nth-child(3), .signup span:nth-child(3){
     position: absolute;
     bottom: 0;
     left: 0;
@@ -166,7 +184,7 @@ header {
     }
 }
 
-#h1title span:nth-child(4){
+#h1title span:nth-child(4),.signup  span:nth-child(4){
     position: absolute;
     top: 0;
     left: 0;
@@ -192,6 +210,7 @@ footer {
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
+    padding: 1px;
     width: 90%;
     background-color: rgb(48, 48, 48);
 }
@@ -295,6 +314,13 @@ h1 {
     text-decoration-line: underline;
 }
 
+h2{
+    color: #5AB9EA;
+    font-family: Babus;
+    letter-spacing: 2px;
+    text-shadow: 1px 0 2px black, 0 1px 2px black;
+}
+
 p {
     opacity: 100%;
     font-size: 20px;
@@ -355,6 +381,17 @@ input[type=button], input[type=submit], input[type=reset] {
     border: 1px solid black;
     border-radius: 10px;
     box-shadow: 1px 0 2px black, 0 1px 2px black;
+
+    animation: animatebutton 1s alternate infinite;
+}
+
+@keyframes animatebutton{
+    0%{
+        box-shadow: 1px 0 2px #8860D0, 0 1px 2px #5680E9
+    }
+    100%{
+        box-shadow: 1px 0 15px #8860D0, 0 1px 15px #5680E9
+    }
 }
 
 button.addLike{
@@ -392,6 +429,19 @@ label {
     clear: left;
     width: 100%;
     text-align: center;
+}
+
+#advanced form{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+#advanced input[type=submit]{
+    grid-column: 2;
+    margin: auto;
+    width: 200px;
+    height: auto;
 }
 
 .menu{
@@ -440,6 +490,7 @@ label {
     overflow: hidden;
     transition: max-height 0.3s;
     max-height: 0;
+    padding: 0px;
 }
 
 .smenu a {
@@ -452,6 +503,7 @@ label {
 
 .item:target .smenu{
     max-height: 500em;
+    padding: 10px;
 }
 
 /*========================================= OTHER CSS =========================================*/
@@ -556,15 +608,11 @@ table {
     /*================= CONTROLS/BUTTONS/ANIMATIONS CSS ==================*/
 
     input[type=button], input[type=submit], input[type=reset] {
-        background-color: #4CAF50;
-        font-family: Gruppo;
         font-size: 25px;
         padding: 16px 32px;
         text-decoration: none;
         margin: 8px 4px;
         cursor: pointer;
-
-        border: 3px solid black;
     }
 
     header ::after {
@@ -656,6 +704,19 @@ table {
         border-collapse: collapse;
     }
 
+    #advanced form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+    
+    #advanced input[type=submit]{
+        grid-column: 1 / 3;
+        margin: auto;
+        width: 200px;
+        height: auto;
+    }
+
     tbody{
         display:block;
         width: 100%;
@@ -664,7 +725,6 @@ table {
     }
 
     .container {
-        border: 3px solid black;
         margin: auto;
         margin-top: 180px;
     }
@@ -731,15 +791,11 @@ table {
     /*================= CONTROLS/BUTTONS/ANIMATIONS CSS ==================*/
 
     input[type=button], input[type=submit], input[type=reset] {
-        background-color: #4CAF50;
-        font-family: Gruppo;
         font-size: 25px;
         padding: 16px 32px;
         text-decoration: none;
         margin: 8px 4px;
         cursor: pointer;
-
-        border: 3px solid black;
     }
 
     header ::after {
@@ -831,6 +887,21 @@ table {
         border-collapse: collapse;
     }
 
+    #advanced form{
+        display: block;
+    }
+
+    #advanced label{
+        margin-top: 10px;
+    }
+    
+    #advanced input[type=submit]{
+        margin: auto;
+        margin-top: 10px;
+        width: 200px;
+        height: auto;
+    }
+
     tbody {
         display:block;
         width: 100%;
@@ -839,7 +910,6 @@ table {
     }
 
     .container {
-        border: 3px solid black;
         margin: auto;
         margin-top: 225px;
     }
