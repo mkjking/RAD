@@ -136,7 +136,7 @@
             //Post to browser
             imagepng($image, "Searches.png");
             imagedestroy($image);
-            echo "<img src='Searches.png'><p></p>";
+            echo "<img src='Searches.png' alt='Top 10 Searched Movies'><p></p>";
         }
         else {
             echo "<h1>No Movies Found</h1>";

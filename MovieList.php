@@ -86,8 +86,8 @@
                         . "<td> &nbsp" . $row['aspect'] . "&nbsp </td>"
                         . "<td> &nbsp" . $row['searchNo'] . "</td>"
                         . "<td> &nbsp" . $row['likes'] . "</td>"
-                        . "<td> <button type='button' class='addLike'><i class='fa fa-thumbs-up'></i>Like</button>
-                            <button type='button' class='removeLike'><i class='fa fa-thumbs-down'></i>Dislike</button> </td></tr>";
+                        . "<td> <button title='Like' type='button' class='addLike'><i class='fa fa-thumbs-up'></i>Like</button>
+                            <button title='Dislike' type='button' class='removeLike'><i class='fa fa-thumbs-down'></i>Dislike</button> </td></tr>";
                     }
                     
                     //Send Table to Browser

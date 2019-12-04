@@ -69,9 +69,10 @@
             </div>
             <div class="content">
                 <!--Signup page link-->
-                <p >Want to receive newsletters and other information about movies?
+                <p title="Want to receive newsletters and other information about movies?
+                 Click below to signup for our Newsletter program!" >Want to receive newsletters and other information about movies?
                  Click below to signup for our Newsletter program!</p>
-                <a href="Signup.php"><h1 style="color:#5AB9EA;">SIGNUP!</h1></a>
+                <a title="Signup" href="Signup.php"><h1 style="color:#5AB9EA;">SIGNUP!</h1></a>
             </div>
         </div>
         

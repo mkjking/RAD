@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 
     <!-- 
@@ -45,18 +48,26 @@
 
         <div class="container">
             <div class="content">
-                <h1>Admin Control</h1>
-
+                <h1>Admin Login</h1>
                 <?php 
                     require 'functions/Connection.php';
-                ?>
+                ?>               
             </div>
             <div class="content">
                 <?php 
                 require 'functions/StoreTop10.php';
                 require 'functions/AdminLogin.php';
-                    //CHECK FOR LOGIN
-                if ($loginStatus) {
+                
+                //check session
+                if(isset($_POST['btnLogOut'])) {
+                  session_unset();
+                }
+                //check session vars
+                if($_SESSION["user"] != '' && $_SESSION["pass"] != '') {
+                  $loginStatus = true;
+                }
+
+                if($loginStatus) {
                         //USER TABLE
                         echo "<h1>SUBSCRIBED USERS</h1>";
                         include 'functions/Usertable.php';
@@ -77,7 +88,7 @@
                         echo "<option value='$ratingDate'>$ratingDate</option>";
                     }
                         echo'    </select>
-                            <p><input type="submit" name="btnGetGraph"
+                            <p><input title="Retreive Data" type="submit" name="btnGetGraph"
                             value="Retreive Data"/></p>
                         </form>';
                 
@@ -89,7 +100,7 @@
                                   <input type="text" name="adminEmail"><br>
                                   <label>Change Your Password: </label>
                                   <input type="text" name="adminPassword"><br>
-                                  <input type="submit" name="btnChange" 
+                                  <input title="Change" type="submit" name="btnChange" 
                                   value="Change"/>
                               </form>
                               <h1>CREATE NEW ADMIN ACCOUNT</h1>
@@ -102,17 +113,29 @@
                                   characters or longer and have
                                    <br> one lower case, one upper case,
                                     and one number</p>
-                                  <input type="submit" name="btnCreate"
+                                  <input title="Create" type="submit" name="btnCreate"
                                    value="Create"/>
                               </form>
                               <h1>REMOVE A USER</h1>
                               <form action="AdminControl.php" method="post">
                                    <label>User Email to Remove: </label>
                                    <input type="text" name="userEmail"><br>
-                                  <input type="submit" name="btnRemove"
+                                  <input title="Remove" type="submit" name="btnRemove"
                                    value="Remove"/>
-                        </form>';
-                }                
+                        </form>
+                        <form action="Admin.php" method="post">
+                          <input title="Logout" type="submit" name="btnLogOut" value="Logout" />
+                        </form> ';
+                }
+                else {
+                  echo '<form action="Admin.php" method="post">
+                      <label>Email: </label><input type="text"
+                       name="adminEmail" placeholder=""><br>
+                      <label>Password: </label><input type="text"
+                       name="password" placeholder=""><br>
+                      <input title="Login" type="submit" name="btnLogin" value="Login" />
+                  </form> ';
+                }
                 ?>
             </div>
         </div>

@@ -35,22 +35,32 @@
 
 <!----------------- Uncomment to bring back date selector, which logs admin out ---------------------->
                 <?php
-                    // include 'config.php';
-                    // $conn = mysqli_connect($host,$user,$password, $database);
-                    // $resultSet = $conn->query("SELECT ts FROM ratings_tbl ORDER BY ts DESC");
+                    include 'config.php';
+                    $conn = mysqli_connect($host,$user,$password, $database);
+                    $resultSet = $conn->query("SELECT ts FROM ratings_tbl ORDER BY ts DESC");
                 ?>
 
-<!--                 <form action="ratingsHistory.php" method="post">
+                <form action="ratingsHistory.php" method="post">
                     <select name="ratings">
                         <?php
-                            // while($rows = $resultSet->fetch_assoc()){
-                            // $ratingDate = $rows['ts'];
-                            // echo "<option value='$ratingDate'>$ratingDate</option>";
-                            // }
+                            while($rows = $resultSet->fetch_assoc()){
+                            $ratingDate = $rows['ts'];
+                            echo "<option value='$ratingDate'>$ratingDate</option>";
+                            }
                         ?>
                     </select>
-                    <p><input class="retrieveBtn" type="submit" name="btnGetGraph" value="Retreive Data"/></p>
-                </form> -->
+                    <p><input id="retrieve" class="retrieveBtn" type="submit" name="btnGetGraph" value="Retreive Data" /></p>
+                    <input type="hidden" id="count" name="custId" value="1">
+                </form>
+<!--                 <script>
+                    var $button = document.getElementById('retrieve');
+                    var $counter = document.getElementById('count');
+
+                    $button.addEventListener('click', function(){
+                        $counter.value = parseInt($counter.value) +1;
+                        console.log($counter.value)
+                    }, false);
+                </script> -->
 <!------------------------------------------------------------------------------------------------------>
                 <?php
                     //Perform a check for button click 
@@ -232,13 +242,13 @@
                             echo "<img src='RatingsHistorical.png'><p></p>";
 
                             //Uncomment this line and comment out javsscript if using date selector
-                            // echo "<p class='unsub'><a href='Admin.php'>Back to Admin Page</a></p>";
-                            echo'<button type="button" class="goBack">Back to Admin</button>
-                                <script>
-                                    $(".goBack").click(function(){
-                                         window.history.back();
-                                        });
-                                </script>';
+                            echo "<p class='unsub'><a href='Admin.php'>Back to Admin Page</a></p>";
+                            // echo'<button title="Back to Admin" type="button" class="goBack">Back to Admin</button>
+                            //     <script>
+                            //         $(".goBack").click(function(){
+                            //              window.history.back();
+                            //             });
+                            //     </script>';
                    }   
                 ?>
                 

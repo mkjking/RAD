@@ -113,6 +113,7 @@
 	   		$Ratings[6]->id ==$prevRatings[6] && $Ratings[7]->id == $prevRatings[7] &&
 	   		$Ratings[8]->id == $prevRatings[8] && $Ratings[9]->id == $prevRatings[9]) {
 
+
 	   		// echo previous image as top 10 hasnt changed, image only generated if data changes
 	        //echo "<h1>Top 10 Rated Movies</h1>";
             //echo "<img src='Ratings.png'><p></p>";

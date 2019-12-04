@@ -9,14 +9,6 @@
     -->
 
 
-    <form action="Admin.php" method="post">
-        <label>Email: </label><input type="text"
-         name="adminEmail" placeholder=""><br>
-        <label>Password: </label><input type="text"
-         name="password" placeholder=""><br>
-        <input type="submit" name="btnLogin" value="Login" />
-    </form>
-
     <?php
         /**
         PHP version 7
@@ -31,7 +23,6 @@
 
         @link http:/pear.php.net
          **/
-        $loginStatus = false;
 
         //Perform a check for button click 
     if (isset($_POST['btnLogin'])) {
@@ -54,7 +45,11 @@
             && $adminEmail === $emailEntered
         ) {
             $loginStatus=true;
+            session_start();
+            $_SESSION["user"] = $emailEntered;
+            $_SESSION["pass"] = $passwordEntered;
         } else {
+            $loginStatus = false;
             echo "<p style=\"font-size: 20px\"><span style=\"
             color: Red\"> Details Incorrect</span></p>";
         }

@@ -35,11 +35,11 @@
 
                     <form action="Setup.php" method="post">
                         <h1>Setup Database:</h1>
-                        <p><input type="submit" name="btnSetupDatabase" value="Setup Database" onclick="SetupDatabase()" /></p>
+                        <p><input title="Setup Database" type="submit" name="btnSetupDatabase" value="Setup Database" onclick="SetupDatabase()" /></p>
                         <h1>Import Data:</h1>
                         <p>
-                            <input type="submit" name="btnImportSQL" value="Import Movies SQL" onclick="ImportSQL()" />
-                            <input type="submit" name="btnImportCSV" value="Import Movies CSV" onclick="ImportCSV()" />
+                            <input title="Import Movies SQL" type="submit" name="btnImportSQL" value="Import Movies SQL" onclick="ImportSQL()" />
+                            <input title="Import Movies CSV" type="submit" name="btnImportCSV" value="Import Movies CSV" onclick="ImportCSV()" />
                         </p>
                     </form>
                     

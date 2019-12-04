@@ -9,8 +9,8 @@
     -->
 
     <div class="footerContainer">
-        <a href="Unsubscribe.php"><p class="unsub">Unsubscribe from newsletter</p></a>
-        <p class="provided"> &nbsp Program provided by: Blayde Dietsch, Noah Jackson and Mitchel King &nbsp</p>
+        <a title="Unsubscribe from newsletter" href="Unsubscribe.php"><p class="unsub">Unsubscribe from newsletter</p></a>
+        <p title="Program provided by: Blayde Dietsch, Noah Jackson and Mitchel King" class="provided"> &nbsp Program provided by: Blayde Dietsch, Noah Jackson and Mitchel King &nbsp</p>
     </div>
 
 </html>

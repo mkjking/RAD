@@ -35,7 +35,7 @@
     <!-- Create all the input boxes that may be needed and placeholders -->
     <div class="menu">
         <li class="item" id="simple">
-            <a href="#simple" class="btn">Simple Search</a>
+            <a title="Simple Search" href="#simple" class="btn">Simple Search</a>
             <div class="smenu">
                 <form action="MoviesSearch.php" method="post">
                     <label>MovieID: </label><input type="text"
@@ -44,12 +44,12 @@
                     name="title" placeholder="Dead Bang"><br>
                     <label>Genre: </label><input type="text"
                     name="genre" placeholder="Action/Adventure"><br>
-                    <input type="submit" name="btnSearch" value="Search" />
+                    <input title="Search" type="submit" name="btnSearch" value="Search" />
                 </form>
             </div>
         </li>
         <li class="item" id="advanced">
-            <a href="#advanced" class="btn">Advanced Search</a>
+            <a title="Advanced Search" href="#advanced" class="btn">Advanced Search</a>
             <div class="smenu">
                 <form action="MoviesSearch.php" method="post">
                     <label>MovieID: </label><input type="text"
@@ -74,7 +74,7 @@
                         name="genre" placeholder="Action/Adventure"><br>
                         <label>Aspect: </label><input type="text"
                         name="aspect" placeholder="1.33:1"><br>
-                        <input type="submit" name="btnSearch" value="Search" />
+                        <input title="Search" type="submit" name="btnSearch" value="Search" />
                 </form>
             </div>
         </li>
