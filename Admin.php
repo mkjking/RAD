@@ -113,9 +113,9 @@
                   echo '<h2>CREATE NEW ADMIN ACCOUNT</h2>
                   <form action ="AdminControl.php" method="post">
                       <label>Enter Your Email: </label>
-                      <input type="text" name="createEmail"><br>
+                      <input title="Email" type="text" name="createEmail"><br>
                       <label>Choose the Password: </label>
-                      <input type="text" name="createPassword"><br>
+                      <input title="Password" type="text" name="createPassword"><br>
                       <p style="font-size=6px">Password must be 8 
                       characters or longer and have
                        <br> one lower case, one upper case,
@@ -133,7 +133,7 @@
                     echo '<h2>REMOVE A USER</h2>
                       <form action="AdminControl.php" method="post">
                       <label>User Email to Remove: </label>
-                      <input type="text" name="userEmail"><br>
+                      <input title="Email" type="text" name="userEmail"><br>
                       <input title="Remove" type="submit" name="btnRemove"
                       value="Remove"/>
                     </form>';
@@ -163,9 +163,9 @@
                 }
                 else {
                   echo '<form action="Admin.php" method="post">
-                      <label>Email: </label><input type="text"
+                      <label>Email: </label><input title="Email" type="text"
                        name="adminEmail" placeholder="" tabindex="6"><br>
-                      <label>Password: </label><input type="password"
+                      <label>Password: </label><input title="Password" type="password"
                        name="password" placeholder="" tabindex="7"><br>
                       <input title="Login" type="submit" name="btnLogin" value="Login" tabindex="8"/>
                   </form> ';

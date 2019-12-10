@@ -17,7 +17,7 @@
 
         @package RAD
 
-        @author Original Author <mitchel_king@icloud.com>
+        @author Original Author <mitchel_king@icloud.com>, Blayde Dietsch, Noah Jackson
 
         @license http://www.php.net/license PHP license 7
 

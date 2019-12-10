@@ -38,11 +38,11 @@
             <a title="Simple Search" href="#simple" class="btn" tabindex="6">Simple Search</a>
             <div class="smenu">
                 <form action="MoviesSearch.php" method="post">
-                    <label>MovieID: </label><input type="text"
+                    <label>MovieID: </label><input title="Movie ID" type="text"
                     name="movieID" placeholder="248" tabindex="7"><br>
-                    <label>Title: </label><input type="text"
+                    <label>Title: </label><input title="Title" type="text"
                     name="title" placeholder="Dead Bang" tabindex="8"><br>
-                    <label>Genre: </label><input type="text"
+                    <label>Genre: </label><input title="Genre" type="text"
                     name="genre" placeholder="Action/Adventure" tabindex="9"><br>
                     <input title="Search" type="submit" name="btnSearch" value="Search" tabindex="10"/>
                 </form>
@@ -54,47 +54,47 @@
                 <form action="MoviesSearch.php" method="post">
                     <!--Movie ID-->
                     <label for="movieID">
-                        MovieID: <br> <input type="text" name="movieID" placeholder="248" tabindex="12">
+                        MovieID: <br> <input title="Movie ID" type="text" name="movieID" placeholder="248" tabindex="12">
                     </label>
                     <!--Title-->
                     <label for="title">
-                        Title: <br> <input type="text" name="title" placeholder="Dead Bang" tabindex="13">
+                        Title: <br> <input title="Title" type="text" name="title" placeholder="Dead Bang" tabindex="13">
                     </label>
                     <!--Studio-->
                     <label for="studio">
-                        Studio: <br> <input type="text" name="studio" placeholder="Warner Brothers" tabindex="14">
+                        Studio: <br> <input title="Studio" type="text" name="studio" placeholder="Warner Brothers" tabindex="14">
                     </label>
                     <!--Status-->
                     <label for="status">
-                        Status: <br> <input type="text" name="status" placeholder="Out" tabindex="15">
+                        Status: <br> <input title="Status" type="text" name="status" placeholder="Out" tabindex="15">
                     </label>
                     <!--Sound-->
                     <label for="sound">
-                        Sound: <br> <input type="text" name="sound" placeholder="SUR" tabindex="16">
+                        Sound: <br> <input title="Sound" type="text" name="sound" placeholder="SUR" tabindex="16">
                     </label>
                     <!--Versions-->
                     <label for="versions">
-                        Versions: <br> <input type="text" name="versions" placeholder="4:3" tabindex="17">
+                        Versions: <br> <input title="Versions" type="text" name="versions" placeholder="4:3" tabindex="17">
                     </label>
                     <!--Price-->
                     <label for="recRetPrice">
-                        Price: <br> <input type="text" name="recRetPrice" placeholder="9.99" tabindex="18">
+                        Price: <br> <input title="Price" type="text" name="recRetPrice" placeholder="9.99" tabindex="18">
                     </label>
                     <!-- Rating -->
                     <label for="rating">
-                        Rating: <br> <input type="text" name="rating" placeholder="R" tabindex="19">
+                        Rating: <br> <input title="Rating" type="text" name="rating" placeholder="R" tabindex="19">
                     </label>
                     <!-- Year -->
                     <label for="year">
-                        Year: <br> <input type="text" name="year" placeholder="1989" tabindex="20">
+                        Year: <br> <input title="Year" type="text" name="year" placeholder="1989" tabindex="20">
                     </label>
                     <!-- Genre -->
                     <label for="genre">
-                        Genre: <br> <input type="text" name="genre" placeholder="Action/Adventure" tabindex="21">
+                        Genre: <br> <input title="Genre" type="text" name="genre" placeholder="Action/Adventure" tabindex="21">
                     </label>
                     <!-- Aspect -->
                     <label for="aspect">
-                        Aspect: <br> <input type="text" name="aspect" placeholder="1.33:1" tabindex="22">
+                        Aspect: <br> <input title="Aspect" type="text" name="aspect" placeholder="1.33:1" tabindex="22">
                     </label>
                     <!-- Search Button -->
                     <input title="Search" type="submit" name="btnSearch" value="Search" tabindex="23"/>

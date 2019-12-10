@@ -10,17 +10,17 @@
 
 
     <form action="Signup.php" method="post">
-        <p>Full Name: <input type="text" name="userName"
+        <p>Full Name: <input title="Full Name" type="text" name="userName"
          placeholder="John Smith"></p>
-        <p>Email: <input type="text" name="email"
+        <p>Email: <input title="Email" type="text" name="email"
          placeholder="JohnSmith@email.com"></p>
-        <p>Receive Monthly Newsletter?: Yes Please<input type="radio"
-         name="monthlyEmails" value="true" checked> No Thanks<input type="radio"
+        <p>Receive Monthly Newsletter?: Yes Please<input title="Yes Monthly Newsletter" type="radio"
+         name="monthlyEmails" value="true" checked> No Thanks<input title="No Monthly Newsletter" type="radio"
           name="monthlyEmails" value="false"></p>
-        <p>Receive Movie Blasts?: Yes Please<input type="radio"
-         name="newsEmails" value="true" checked> No Thanks<input type="radio"
+        <p>Receive Movie Blasts?: Yes Please<input title="Yes Movie Blasts" type="radio"
+         name="newsEmails" value="true" checked> No Thanks<input title="No Movie Blasts" type="radio"
           name="newsEmails" value="false"></p>
-        <p><input type="submit" name="btnSignup" value="Sign Up!" /></p>
+        <p><input title="Signup!" type="submit" name="btnSignup" value="Sign Up!" /></p>
     </form>
 
     <?php
