@@ -13,7 +13,7 @@
             $result = mysqli_query($conn, $sql);
 
             if(mysqli_num_rows($result) > 0) {
-                echo "<table border = '1' align = 'center'>";
+                echo "<table class='user'>";
                 echo "<th> &nbsp Name &nbsp</th>" 
                 . "<th> &nbsp Email &nbsp</th>"
                 . "<th>&nbsp Monthly</th>"

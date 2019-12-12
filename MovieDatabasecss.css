@@ -519,6 +519,24 @@ table {
     margin-bottom: 30px;
 }
 
+Table.user {
+    opacity: 100%;
+    font-family: Babus;
+    font-size: large;
+    padding: 1px;
+    color: white;
+    border: 3px solid white;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+Table.user tbody{
+    border: 1px solid white;
+}
+
+
+
+
 /*========================================= FONTS =========================================*/
 
 @font-face {
@@ -717,6 +735,12 @@ table {
         height: auto;
     }
 
+    Table.user tbody{
+        display: table-row-group;
+        vertical-align: middle;
+        border-color: inherit;
+    }
+
     tbody{
         display:block;
         width: 100%;
@@ -900,6 +924,13 @@ table {
         margin-top: 10px;
         width: 200px;
         height: auto;
+    }
+
+    Table.user tbody{
+        display: table-row-group;
+        vertical-align: middle;
+        border-color: inherit;
+        font-size: small;
     }
 
     tbody {

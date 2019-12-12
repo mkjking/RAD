@@ -56,36 +56,36 @@
                     }
                     //Create table
                     echo "<table border = '1' align = 'center'>";
-                    echo "<th> &nbsp ID &nbsp</th>" 
-                    . "<th> &nbsp Title &nbsp</th>" 
-                    . "<th> &nbsp Studio &nbsp</th>"
-                    . "<th> &nbsp Status &nbsp</th>"
-                    . "<th> &nbsp Sound &nbsp</th>"
-                    . "<th> &nbsp Versions &nbsp</th>"
-                    . "<th> &nbsp RecRetPrice &nbsp</th>"
-                    . "<th> &nbsp Rating &nbsp</th>"
-                    . "<th> &nbsp Year &nbsp</th>"
-                    . "<th> &nbsp Genre &nbsp</th>"
-                    . "<th> &nbsp Aspect &nbsp</th>"
-                    . "<th> &nbsp Search Count </th>"
-                    . "<th> &nbsp Likes </th>"
-                    . "<th> &nbsp Rate </th>";
+                    echo "<th> ID</th>" 
+                    . "<th> Title</th>" 
+                    . "<th> Studio</th>"
+                    . "<th> Status</th>"
+                    . "<th> Sound</th>"
+                    . "<th> Versions</th>"
+                    . "<th> RecRetPrice</th>"
+                    . "<th> Rating</th>"
+                    . "<th> Year</th>"
+                    . "<th> Genre</th>"
+                    . "<th> Aspect</th>"
+                    . "<th> Search Count</th>"
+                    . "<th> Likes</th>"
+                    . "<th> Rate</th>";
                                         
                     //Display table data
                     while ($row = mysqli_fetch_array($result)) {
-                        echo "<tr><td class='id'> &nbsp" . $row['ID'] . "&nbsp </td>"
-                        . "<td> &nbsp" . $row['title'] . "&nbsp </td>"
-                        . "<td> &nbsp" . $row['studio'] . "&nbsp </td>" 
-                        . "<td> &nbsp" . $row['status'] . "&nbsp </td>" 
-                        . "<td> &nbsp" . $row['sound'] . "&nbsp </td>" 
-                        . "<td> &nbsp" . $row['versions'] . "&nbsp </td>" 
-                        . "<td> &nbsp" . $row['recRetPrice'] . "&nbsp </td>" 
-                        . "<td> &nbsp" . $row['rating'] . "&nbsp </td>" 
-                        . "<td> &nbsp" . $row['year'] . "&nbsp </td>"
-                        . "<td> &nbsp" . $row['genre'] . "&nbsp </td>" 
-                        . "<td> &nbsp" . $row['aspect'] . "&nbsp </td>"
-                        . "<td> &nbsp" . $row['searchNo'] . "</td>"
-                        . "<td> &nbsp" . $row['likes'] . "</td>"
+                        echo "<tr><td class='id'>" . $row['ID'] . " </td>"
+                        . "<td>" . $row['title'] . " </td>"
+                        . "<td>" . $row['studio'] . " </td>" 
+                        . "<td>" . $row['status'] . " </td>" 
+                        . "<td>" . $row['sound'] . " </td>" 
+                        . "<td>" . $row['versions'] . " </td>" 
+                        . "<td>" . $row['recRetPrice'] . " </td>" 
+                        . "<td>" . $row['rating'] . " </td>" 
+                        . "<td>" . $row['year'] . " </td>"
+                        . "<td>" . $row['genre'] . " </td>" 
+                        . "<td>" . $row['aspect'] . " </td>"
+                        . "<td>" . $row['searchNo'] . "</td>"
+                        . "<td>" . $row['likes'] . "</td>"
                         . "<td> <button title='Like' type='button' class='addLike'><i class='fa fa-thumbs-up'></i>Like</button>
                             <button title='Dislike' type='button' class='removeLike'><i class='fa fa-thumbs-down'></i>Dislike</button> </td></tr>";
                     }
